@@ -1,3 +1,4 @@
+import Footer from "@app/components/pages/Footer";
 import Header from "@app/components/pages/Header";
 import Sidebar from "@app/components/pages/Sidebar";
 import { useSidebarControlTogglerState, useSidebarTogglerState, useWindowSizeState } from "@app/store/ui";
@@ -95,7 +96,7 @@ export const AdminLayout = (props: LayoutProps) => {
                         {children}
                     </section>
                 </div>
-
+                <Footer/>
                 <div
                     id="sidebar-overlay"
                     role="presentation"
