@@ -6,6 +6,7 @@ import MenuItem from "./sidebars/MenuItem";
 
 export interface IMenuItem {
     name: string;
+    type?: string;
     icon?: string;
     path?: string;
     children?: Array<IMenuItem>;
@@ -13,36 +14,70 @@ export interface IMenuItem {
 
 export const MENU: IMenuItem[] = [
     {
+        name: 'Admin',
+        type: 'header'
+    },
+    {
         name: 'Dashboard',
         icon: 'fas fa-tachometer-alt nav-icon',
         path: '/'
     },
     {
         name: 'Users',
-        icon: 'fas fa-wrench nav-icon',
-        path: '/users'
-    },
-    {
-        name: 'Menu Item',
-        icon: 'far fa-caret-square-down nav-icon',
+        icon: 'fas fa-users nav-icon',
         children: [
-        {
-            name: 'Item 1',
-            icon: 'fas fa-hammer nav-icon',
-            path: '/sub-menu-1'
-        },
-
-        {
-            name: 'Item 2',
-            icon: 'fas fa-cogs nav-icon',
-            path: '/sub-menu-2'
-        }
+            {
+                name: 'Tambah User',
+                icon: 'far fa-circle nav-icon',
+                path: '/users/add'
+            },
+            {
+                name: 'Semua User',
+                icon: 'far fa-circle nav-icon',
+                path: '/users'
+            }
         ]
     },
     {
+        name: 'Menu',
+        type: 'header'
+    },
+    {
+        name: 'Data Medis',
+        icon: 'fas fa-notes-medical nav-icon',
+        children: [
+            {
+                name: "Isi Data Medis",
+                icon: 'far fa-circle nav-icon',
+                path: '/medics/add'
+            },
+            {
+                name: "Semua Data Medis",
+                icon: 'far fa-circle nav-icon',
+                path: '/medics'
+            }
+        ]
+    },
+    {
+        name: 'Pengaturan',
+        type: 'header'
+    },
+    {
         name: 'Profil',
-        icon: 'fas fa-wrench nav-icon',
-        path: '/blank'
+        icon: 'fas fa-user-cog nav-icon',
+        children: [
+        {
+            name: 'Ubah Profil',
+            icon: 'far fa-circle nav-icon',
+            path: '/profile/edit'
+        },
+
+        {
+            name: 'Profil Saya',
+            icon: 'far fa-circle nav-icon',
+            path: '/profile'
+        }
+        ]
     },
 ];
 
@@ -77,12 +112,12 @@ export default function Sidebar() {
                         className={`nav nav-pills nav-sidebar flex-column`}
                         role="menu"
                     >
-                        {MENU.map((menuItem: IMenuItem) => (
+                        {MENU.map((menuItem: IMenuItem) => menuItem.type != 'header' ? (
                             <MenuItem
                                 key={menuItem.name + menuItem.path}
                                 menuItem={menuItem}
                             />
-                        ))}
+                        ): (<li key={menuItem.name} className="nav-header">{menuItem.name}</li>))}
                     </ul>
                 </nav>
             </div>

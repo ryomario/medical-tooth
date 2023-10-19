@@ -1,7 +1,9 @@
 {
   "name": "medical-tooth-admin",
   "private": true,
+  "version": "1.1",
   "scripts": {
+    "backend": "node server/index.js",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
@@ -33,6 +35,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "json-server": "^0.17.4",
     "prettier": "^2.8.8",
     "typescript": "^5.1.6",
     "vite": "^4.3.9"

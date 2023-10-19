@@ -1,13 +1,20 @@
 import { AuthProvider, HttpError } from "react-admin";
-import data from "./users.json";
+// import data from "./users.json";
+
+const API_URL = 'http://localhost:8888';
 
 /**
  * This authProvider is only for test purposes. Don't use it in production.
  */
 export const authProvider: AuthProvider = {
-  login: ({ username, password }) => {
-    const user = data.users.find(
-      (u) => u.username === username && u.password === password
+  login: async ({ username, password }) => {
+    const response = await fetch(`${API_URL}/users?username=${username}&password=${password}`,{
+      method: 'GET'
+    });
+    const users = await response.json();
+
+    const user = users.find(
+      (u: any) => u.username === username && u.password === password
     );
 
     if (user) {
