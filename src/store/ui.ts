@@ -43,7 +43,7 @@ const initialState: UiState = {
   layoutFixed: false
 };
 
-addWindowClass('layout-footer-fixed');
+addWindowClass('layout-fixed');
 
 // const uiSlice = {
 //   actions: {

@@ -23,7 +23,7 @@ export const AdminLayout = (props: LayoutProps) => {
 
 
     const [menuSidebarCollapsed, toggleSidebarMenu] = useSidebarTogglerState();
-    const [controlSidebarCollapsed] = useSidebarControlTogglerState();
+    // const [controlSidebarCollapsed] = useSidebarControlTogglerState();
     const [screenSize] = useWindowSizeState();
 
     const {isLoading: isAppLoading, authenticated: authentication} = useAuthState();
@@ -55,7 +55,7 @@ export const AdminLayout = (props: LayoutProps) => {
         removeWindowClass('sidebar-open');
         if (menuSidebarCollapsed && screenSize === 'lg') {
             addWindowClass('sidebar-collapse');
-        } else if (menuSidebarCollapsed && screenSize === 'xs') {
+        } else if (menuSidebarCollapsed && screenSize !== 'lg') {
             addWindowClass('sidebar-open');
         } else if (!menuSidebarCollapsed && screenSize !== 'lg') {
             addWindowClass('sidebar-closed');
@@ -63,13 +63,13 @@ export const AdminLayout = (props: LayoutProps) => {
         }
     }, [screenSize, menuSidebarCollapsed]);
 
-    useEffect(() => {
-        if (controlSidebarCollapsed) {
-            removeWindowClass('control-sidebar-slide-open');
-        } else {
-            addWindowClass('control-sidebar-slide-open');
-        }
-    }, [screenSize, controlSidebarCollapsed]);
+    // useEffect(() => {
+    //     if (controlSidebarCollapsed) {
+    //         removeWindowClass('control-sidebar-slide-open');
+    //     } else {
+    //         addWindowClass('control-sidebar-slide-open');
+    //     }
+    // }, [screenSize, controlSidebarCollapsed]);
     
 
     const getAppTemplate = useCallback(() => {
