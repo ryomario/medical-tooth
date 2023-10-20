@@ -13,19 +13,21 @@ import { useWindowSize } from "./hooks/useWindowSize";
 import { useWindowSizeState } from "./store/ui";
 import { useEffect } from "react";
 import { calculateWindowSize } from "./utils/helpers";
+import UserList from "./components/tables/Users";
 
 const defaultStore = localStorageStore();
 
 export const App = () => {
-  const windowSize = useWindowSize();
+  // const windowSize = useWindowSize();
   const [screenSize, setScreenSize] = useWindowSizeState();
 
   useEffect(() => {
-    const size = calculateWindowSize(windowSize.width);
-    if (screenSize !== size) {
-      setScreenSize(size);
-    }
-  }, [windowSize]);
+    // const size = calculateWindowSize(windowSize.width);
+    // if (screenSize !== size) {
+    //   setScreenSize(size);
+    // }
+    // console.log(screenSize);
+  }, [screenSize]);
   return (
     <BrowserRouter>
       <AdminContext
@@ -37,7 +39,7 @@ export const App = () => {
         <AdminUI
           title="Medical Tooth"
         >
-          <Resource name="users" list={ListGuesser} />
+          <Resource name="users" list={UserList} />
         </AdminUI>
       </AdminContext>
     </BrowserRouter>

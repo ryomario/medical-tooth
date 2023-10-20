@@ -1,3 +1,4 @@
+import { useWindowSize } from '@app/hooks/useWindowSize';
 import {
   addWindowClass,
   calculateWindowSize,
@@ -9,6 +10,7 @@ import {
   SIDEBAR_DARK_SKINS,
   SIDEBAR_LIGHT_SKINS
 } from '@app/utils/themes';
+import { useEffect, useState } from 'react';
 import { useStore } from 'react-admin';
 
 export interface UiState {
@@ -110,7 +112,16 @@ export const useHeaderBorderTogglerState = (): useHeaderBorderTogglerStateResult
 export type useHeaderBorderTogglerStateResult = [boolean, () => void];
 
 // window size
-export const useWindowSizeState = (): useWindowSizeStateResult => useStore<string>('window.size', initialState.screenSize);
+export const useWindowSizeState = (): useWindowSizeStateResult => {
+  const windowSize = useWindowSize();
+  const getSize = () => calculateWindowSize(windowSize.width);
+  const [size, setSize] = useState(getSize());
+
+  useEffect(() => {
+    setSize(getSize());
+  }, [windowSize]);
+  return [size, setSize];
+}
 export type useWindowSizeStateResult = [string, (size: string) => void];
 
 // dark mode toggler
