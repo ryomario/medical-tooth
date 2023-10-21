@@ -1,6 +1,7 @@
 import { useWindowSizeState } from "@app/store/ui";
+import { PfImage } from "@profabric/react-components";
 import { useEffect, useState } from "react";
-import { Datagrid, ImageField, List, SimpleList, TextField } from "react-admin";
+import { Datagrid, FunctionField, ImageField, List, SimpleList, TextField } from "react-admin";
 
 export default function UserList() {
     const [screenSize] = useWindowSizeState();
@@ -22,7 +23,7 @@ export default function UserList() {
             ) : (
                 <Datagrid>
                     <TextField source="id"/>
-                    <ImageField source="avatar"/>
+                    <FunctionField label="avatar" render={(record: any) => (<PfImage src={record?.avatar} fallbackSrc="/img/default-profile.png" width={50} height={50}/>)}/>
                     <TextField source="fullName"/>
                     <TextField source="username"/>
                 </Datagrid>
