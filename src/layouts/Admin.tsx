@@ -6,6 +6,7 @@ import { addWindowClass, removeWindowClass } from "@app/utils/helpers";
 import { PfImage } from "@profabric/react-components";
 import { ErrorInfo, useCallback, useEffect, useState } from "react";
 import { AppBar, LayoutProps, useAuthState, useSidebarState } from "react-admin";
+import { ScopedCssBaseline } from "@mui/material";
 
 export const AdminLayout = (props: LayoutProps) => {
     const {
@@ -93,7 +94,9 @@ export const AdminLayout = (props: LayoutProps) => {
                 <div className="content-wrapper">
                     <div className="pt-3"/>
                     <section className="content">
-                        {children}
+                        <ScopedCssBaseline enableColorScheme>
+                            {children}
+                        </ScopedCssBaseline>
                     </section>
                 </div>
                 <Footer/>
