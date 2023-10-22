@@ -1,4 +1,17 @@
-export default function ContentHeader({ title, breadcrumb }:{ title: string, breadcrumb: BreadCrumbItems }) {
+import { Link } from "react-router-dom";
+
+export default function ContentHeader({ title, breadcrumb }:{ title: string, breadcrumb?: BreadCrumbItems }) {
+    if (!breadcrumb) {
+        breadcrumb = [
+            {
+                title: 'Home',
+                url: '/'
+            },{
+                title: title,
+                active: true
+            }
+        ];
+    }
     return (
         <section className="content-header">
             <div className="container-fluid">
@@ -10,7 +23,7 @@ export default function ContentHeader({ title, breadcrumb }:{ title: string, bre
                         <ol className="breadcrumb float-sm-right">
                             {breadcrumb.map((item: BreadCrumbItem, idx: number) => (
                                 <li key={idx} className={"breadcrumb-item" + (item.active ? ' active': '')}>
-                                    {item.url ? (<a href={item.url}>{item.title}</a>): item.title}
+                                    {item.url ? (<Link to={item.url}>{item.title}</Link>): item.title}
                                 </li>
                             ))}
                         </ol>

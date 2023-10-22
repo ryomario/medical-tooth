@@ -17,7 +17,7 @@ export default function UsersTable() {
     }, [screenSize]);
     return (
         <div>
-            <ContentHeader title="Tabel User" breadcrumb={[{title:"Home",url:"/"},{title:"Semua User",active:true}]}/>
+            <ContentHeader title="Tabel User"/>
             <section className="content">
                 <div className="container-fluid">
                     <UserList/>

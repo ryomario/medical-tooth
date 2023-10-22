@@ -4,6 +4,7 @@ import {
   AdminContext,
   defaultI18nProvider,
   localStorageStore,
+  Admin,
 } from "react-admin";
 import { dataProvider } from "./dataProvider";
 import { authProvider } from "./authProvider";
@@ -14,6 +15,7 @@ import { useWindowSizeState } from "./store/ui";
 import { useEffect } from "react";
 import { calculateWindowSize } from "./utils/helpers";
 import UsersTable from "./contents/tables/Users";
+import Dashboard from "./contents/Dashboard";
 
 const defaultStore = localStorageStore();
 
@@ -38,6 +40,7 @@ export const App = () => {
       >
         <AdminUI
           title="Medical Tooth"
+          dashboard={Dashboard}
         >
           <Resource name="users" list={UsersTable} />
         </AdminUI>
