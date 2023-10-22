@@ -109,7 +109,7 @@ export default function Sidebar() {
             <div className="sidebar">
                 <nav className="mt-2" style={{overflowY: 'hidden', overflowX: 'hidden'}}>
                     <ul
-                        className={`nav nav-pills nav-sidebar flex-column`}
+                        className={`nav nav-pills nav-sidebar nav-child-indent flex-column`}
                         role="menu"
                     >
                         {MENU.map((menuItem: IMenuItem) => menuItem.type != 'header' ? (

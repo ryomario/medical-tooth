@@ -69,20 +69,19 @@ export default function MenuItem({menuItem}: {menuItem: IMenuItem}) {
                 <p>{menuItem.name}</p>
                 {isExpandable ? <i className="right fas fa-angle-left icon-caret" /> : null}
             </a>
-
             {isExpandable &&
                 menuItem &&
-                menuItem.children &&
-                menuItem.children.map((item) => (
-                    <ul key={item.name} className="nav nav-treeview">
-                        <li className="nav-item">
-                        <NavLink className="nav-link" to={`${item.path}`}>
-                            <i className={`${item.icon}`} />
-                            <p>{item.name}</p>
-                        </NavLink>
-                        </li>
+                menuItem.children && (
+                    <ul className="nav nav-treeview">
+                        {menuItem.children.map((item) => (
+                            <li key={item.name} className="nav-item">
+                                <NavLink className="nav-link" to={`${item.path}`}>
+                                    <i className={`${item.icon}`}/>
+                                    <p>{item.name}</p>
+                                </NavLink>
+                            </li>
+                        ))}
                     </ul>
-                    )
                 )
             }
         </li>
