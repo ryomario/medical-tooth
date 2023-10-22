@@ -15,20 +15,22 @@ export default function UserList() {
         // console.log(checkSmall());
     }, [screenSize]);
     return (
-        <List>
-            {isSmall ? (
-                <SimpleList
-                    primaryText={(record)=>record.fullName}
-                    secondaryText={(record)=>record.username}
-                />
-            ) : (
-                <Datagrid>
-                    <TextField source="id"/>
-                    <FunctionField label="Foto Profil" render={(record: any) => (<PfImage src={record?.avatar} fallbackSrc="/img/default-profile.png" width={50} height={50}/>)}/>
-                    <TextField label="Nama Lengkap" source="fullName"/>
-                    <TextField label="Username" source="username"/>
-                </Datagrid>
-            )}
-        </List>
+        <ScopedCssBaseline enableColorScheme>
+            <List>
+                {isSmall ? (
+                    <SimpleList
+                        primaryText={(record)=>record.fullName}
+                        secondaryText={(record)=>record.username}
+                    />
+                ) : (
+                    <Datagrid>
+                        <TextField source="id"/>
+                        <FunctionField label="Foto Profil" render={(record: any) => (<PfImage src={record?.avatar} fallbackSrc="/img/default-profile.png" width={50} height={50}/>)}/>
+                        <TextField label="Nama Lengkap" source="fullName"/>
+                        <TextField label="Username" source="username"/>
+                    </Datagrid>
+                )}
+            </List>
+        </ScopedCssBaseline>
     );
 }

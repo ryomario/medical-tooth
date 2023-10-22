@@ -13,7 +13,7 @@ import { useWindowSize } from "./hooks/useWindowSize";
 import { useWindowSizeState } from "./store/ui";
 import { useEffect } from "react";
 import { calculateWindowSize } from "./utils/helpers";
-import UserList from "./components/tables/Users";
+import UsersTable from "./contents/tables/Users";
 
 const defaultStore = localStorageStore();
 
@@ -39,7 +39,7 @@ export const App = () => {
         <AdminUI
           title="Medical Tooth"
         >
-          <Resource name="users" list={UserList} />
+          <Resource name="users" list={UsersTable} />
         </AdminUI>
       </AdminContext>
     </BrowserRouter>
