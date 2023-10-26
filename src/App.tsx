@@ -14,7 +14,7 @@ import { useWindowSize } from "./hooks/useWindowSize";
 import { useWindowSizeState } from "./store/ui";
 import { useEffect } from "react";
 import { calculateWindowSize } from "./utils/helpers";
-import UsersTable from "./contents/tables/Users";
+import UsersTable, { UserCreate, UserEdit } from "./contents/tables/Users";
 import Dashboard from "./contents/Dashboard";
 
 const defaultStore = localStorageStore();
@@ -42,7 +42,7 @@ export const App = () => {
           title="Medical Tooth"
           dashboard={Dashboard}
         >
-          <Resource name="users" list={UsersTable} />
+          <Resource name="users" list={UsersTable} create={UserCreate} edit={UserEdit} />
         </AdminUI>
       </AdminContext>
     </BrowserRouter>

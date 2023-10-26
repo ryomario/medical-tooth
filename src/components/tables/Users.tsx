@@ -1,7 +1,7 @@
 import { useWindowSizeState } from "@app/store/ui";
 import { PfImage } from "@profabric/react-components";
 import { useEffect, useState } from "react";
-import { Datagrid, FunctionField, ImageField, List, SimpleList, TextField } from "react-admin";
+import { Datagrid, DeleteButton, DeleteWithConfirmButton, EditButton, FunctionField, ImageField, List, SimpleList, TextField, TextInput } from "react-admin";
 import { ScopedCssBaseline } from "@mui/material";
 
 export default function UserList() {
@@ -14,9 +14,12 @@ export default function UserList() {
         setSmall(checkSmall());
         // console.log(checkSmall());
     }, [screenSize]);
+    const usersFilters = [
+        <TextInput label="Cari" source="q" alwaysOn/>
+    ];
     return (
         <ScopedCssBaseline enableColorScheme>
-            <List>
+            <List filters={usersFilters}>
                 {isSmall ? (
                     <SimpleList
                         primaryText={(record)=>record.fullName}
@@ -28,6 +31,8 @@ export default function UserList() {
                         <FunctionField label="Foto Profil" render={(record: any) => (<PfImage src={record?.avatar} fallbackSrc="/img/default-profile.png" width={50} height={50}/>)}/>
                         <TextField label="Nama Lengkap" source="fullName"/>
                         <TextField label="Username" source="username"/>
+                        <EditButton/>
+                        <DeleteWithConfirmButton/>
                     </Datagrid>
                 )}
             </List>

@@ -10,6 +10,7 @@ export interface IMenuItem {
     icon?: string;
     path?: string;
     children?: Array<IMenuItem>;
+    childrenHidden?: boolean;
 }
 
 export const MENU: IMenuItem[] = [
@@ -25,18 +26,7 @@ export const MENU: IMenuItem[] = [
     {
         name: 'Users',
         icon: 'fas fa-users nav-icon',
-        children: [
-            {
-                name: 'Tambah User',
-                icon: 'far fa-circle nav-icon',
-                path: '/users/add'
-            },
-            {
-                name: 'Semua User',
-                icon: 'far fa-circle nav-icon',
-                path: '/users'
-            }
-        ]
+        path: '/users'
     },
     {
         name: 'Menu',

@@ -26,6 +26,9 @@
 .sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover .sidebar .nav-sidebar .nav-link .icon-caret {
   display: block;
 }
+.MuiScopedCssBaseline-root {
+  background-color: transparent !important;
+}
 .MuiScopedCssBaseline-root p {
   margin: 0;
 }
