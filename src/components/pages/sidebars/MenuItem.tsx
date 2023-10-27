@@ -32,7 +32,7 @@ export default function MenuItem({menuItem}: {menuItem: IMenuItem}) {
                     setIsMenuExtended(true);
                 }
             });
-        } else if (menuItem.path === url) {
+        } else if (url.match(menuItem.pathRegex!)) {
             setIsMainActive(true);
         }
     };

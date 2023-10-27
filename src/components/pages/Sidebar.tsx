@@ -9,6 +9,7 @@ export interface IMenuItem {
     type?: string;
     icon?: string;
     path?: string;
+    pathRegex? : string;
     children?: Array<IMenuItem>;
     childrenHidden?: boolean;
 }
@@ -21,12 +22,14 @@ export const MENU: IMenuItem[] = [
     {
         name: 'Dashboard',
         icon: 'fas fa-tachometer-alt nav-icon',
-        path: '/'
+        path: '/',
+        pathRegex: '[/]{1}$'
     },
     {
         name: 'Users',
         icon: 'fas fa-users nav-icon',
-        path: '/users'
+        path: '/users',
+        pathRegex: '(/users).*'
     },
     {
         name: 'Menu',
