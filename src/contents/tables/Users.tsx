@@ -73,6 +73,27 @@ export const UserEdit = () => {
             active:true
         }
     ];
+    const transformFile = (file: any) => {
+        if (!(file instanceof File)) {
+            return file;
+        }
+
+        const preview = URL.createObjectURL(file);
+        const transformedFile = {
+            rawFile: file,
+            src: preview,
+            title: file.name,
+        };
+
+        return transformedFile;
+    };
+    const imageFileFormater = (file: any) => {
+        if (!file) return null;
+
+        if (typeof file === 'string') return {src: file};
+
+        return transformFile(file);
+    };
     return (
         <div>
             <ContentHeader title="Edit User" breadcrumb={breadCrumb} />
@@ -85,12 +106,9 @@ export const UserEdit = () => {
                                 <TextInput source="fullName" label="Nama Lengkap" autoFocus validate={required()}/>
                                 <TextInput source="username" validate={required()}/>
                                 <PasswordInput source="password"/>
-                                <ImageInput source="avatar" maxSize={2000000}>
+                                <ImageInput source="avatar" maxSize={2000000} format={imageFileFormater} parse={imageFileFormater}>
                                     <FunctionField render={(avatar: any) => {
                                         // console.log(avatar);
-                                        if (typeof avatar === 'string') {
-                                            return (<PfImage src={avatar} fallbackSrc="/img/default-profile.png" width={200} height={200}/>);
-                                        }
                                         return (<PfImage src={avatar.src} fallbackSrc="/img/default-profile.png" width={200} height={200}/>);
                                     }}/>
                                 </ImageInput>
