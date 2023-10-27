@@ -10,7 +10,7 @@
 
 #root {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .main-header .navbar-nav .nav-item .nav-link {

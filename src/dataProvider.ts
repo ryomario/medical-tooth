@@ -12,20 +12,26 @@ export const dataProvider = withLifecycleCallbacks(jsonServerProvider(
        */
       resource: 'users',
       async beforeUpdate(params, dProvider) {
-          // Freshly dropped pictures are File objects and must be converted to base64 strings
-          if (params.data.avatar?.rawFile instanceof File){
-            const filePicture = params.data.avatar;
-
-            const base64Pictures = await convertFileToBase64(filePicture);
-
-            params.data.avatar = base64Pictures;
-          }
-
-          return params; 
+          return await handleUploadImageUser(params); 
+      },
+      async beforeCreate(params, dataProvider) {
+        return await handleUploadImageUser(params); 
       },
     }
   ]);
 
+const handleUploadImageUser = async (params: any) => {
+  // Freshly dropped pictures are File objects and must be converted to base64 strings
+  if (params.data.avatar?.rawFile instanceof File){
+    const filePicture = params.data.avatar;
+
+    const base64Pictures = await convertFileToBase64(filePicture);
+
+    params.data.avatar = base64Pictures;
+  }
+
+  return params;
+}
 /**
  * Convert a `File` object returned by the upload input into a base 64 string.
  * That's not the most optimized way to store images in production, but it's

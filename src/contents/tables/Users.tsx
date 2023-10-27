@@ -46,11 +46,17 @@ export const UserCreate = () => {
             <section className="content">
                 <div className="container-fluid">
                     <ScopedCssBaseline enableColorScheme>
-                        <Create>
+                        <Create redirect="list">
                             <SimpleForm>
                                 <TextInput source="fullName" label="Nama Lengkap" autoFocus/>
                                 <TextInput source="username"/>
                                 <PasswordInput source="password"/>
+                                <ImageInput source="avatar" maxSize={2000000}>
+                                    <FunctionField render={(avatar: any) => {
+                                        // console.log(avatar);
+                                        return (<PfImage src={avatar.src} fallbackSrc="/img/default-profile.png" width={200} height={200}/>);
+                                    }}/>
+                                </ImageInput>
                             </SimpleForm>
                         </Create>
                     </ScopedCssBaseline>
