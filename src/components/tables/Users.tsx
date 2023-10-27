@@ -24,6 +24,7 @@ export default function UserList() {
                     <SimpleList
                         primaryText={(record)=>record.fullName}
                         secondaryText={(record)=>record.username}
+                        leftAvatar={(record) => (<PfImage src={record?.avatar} fallbackSrc="/img/default-profile.png" width={50} height={50}/>)}
                     />
                 ) : (
                     <Datagrid>
@@ -31,8 +32,10 @@ export default function UserList() {
                         <FunctionField label="Foto Profil" render={(record: any) => (<PfImage src={record?.avatar} fallbackSrc="/img/default-profile.png" width={50} height={50}/>)}/>
                         <TextField label="Nama Lengkap" source="fullName"/>
                         <TextField label="Username" source="username"/>
-                        <EditButton/>
-                        <DeleteWithConfirmButton/>
+                        <>
+                            <EditButton/>
+                            <DeleteWithConfirmButton/>
+                        </>
                     </Datagrid>
                 )}
             </List>

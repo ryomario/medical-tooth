@@ -85,9 +85,15 @@ export const UserEdit = () => {
                                 <TextInput source="fullName" label="Nama Lengkap" autoFocus validate={required()}/>
                                 <TextInput source="username" validate={required()}/>
                                 <PasswordInput source="password"/>
-                                {/* <ImageInput source="avatar">
-                                    <ImageField source="src" title="title"/>
-                                </ImageInput> */}
+                                <ImageInput source="avatar" maxSize={2000000}>
+                                    <FunctionField render={(avatar: any) => {
+                                        // console.log(avatar);
+                                        if (typeof avatar === 'string') {
+                                            return (<PfImage src={avatar} fallbackSrc="/img/default-profile.png" width={200} height={200}/>);
+                                        }
+                                        return (<PfImage src={avatar.src} fallbackSrc="/img/default-profile.png" width={200} height={200}/>);
+                                    }}/>
+                                </ImageInput>
                             </SimpleForm>
                         </Edit>
                     </ScopedCssBaseline>
