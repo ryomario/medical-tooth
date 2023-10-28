@@ -38,39 +38,18 @@ export const MENU: IMenuItem[] = [
     {
         name: 'Data Medis',
         icon: 'fas fa-notes-medical nav-icon',
-        children: [
-            {
-                name: "Isi Data Medis",
-                icon: 'far fa-circle nav-icon',
-                path: '/medics/add'
-            },
-            {
-                name: "Semua Data Medis",
-                icon: 'far fa-circle nav-icon',
-                path: '/medics'
-            }
-        ]
+        path: '/medics',
+        pathRegex: '(/medics).*'
     },
     {
         name: 'Pengaturan',
         type: 'header'
     },
     {
-        name: 'Profil',
+        name: 'Profil Saya',
         icon: 'fas fa-user-cog nav-icon',
-        children: [
-        {
-            name: 'Ubah Profil',
-            icon: 'far fa-circle nav-icon',
-            path: '/profile/edit'
-        },
-
-        {
-            name: 'Profil Saya',
-            icon: 'far fa-circle nav-icon',
-            path: '/profile'
-        }
-        ]
+        path: '/profile',
+        pathRegex: '(/profile).*'
     },
 ];
 

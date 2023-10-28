@@ -46,6 +46,10 @@ export const authProvider: AuthProvider = {
 
     return Promise.resolve(user);
   },
+  setIdentity: (identity: {id:number,username:string,fullName:string}) => {
+    localStorage.setItem("user", JSON.stringify(identity));
+    return Promise.resolve();
+  }
 };
 
 export default authProvider;

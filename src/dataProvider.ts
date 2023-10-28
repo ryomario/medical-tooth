@@ -1,5 +1,5 @@
 import jsonServerProvider from "ra-data-json-server";
-import { ResourceCallbacks, withLifecycleCallbacks } from "react-admin";
+import { ResourceCallbacks, useGetIdentity, withLifecycleCallbacks } from "react-admin";
 import { createCanvas, loadImage, Image } from "canvas";
 
 export const dataProvider = withLifecycleCallbacks(jsonServerProvider(
