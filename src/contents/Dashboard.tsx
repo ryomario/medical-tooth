@@ -1,6 +1,9 @@
 import ContentHeader from "@app/components/pages/contents/Header";
+import useDocumentTitle from "@app/hooks/useDocumentTitle";
 
 export default function Dashboard() {
+    const [_, setTitle] = useDocumentTitle();
+    setTitle('Dashboard');
     return (
         <>
             <ContentHeader title="Dashboard"/>

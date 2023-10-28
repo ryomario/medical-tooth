@@ -1,4 +1,5 @@
 import ContentHeader, { BreadCrumbItems } from "@app/components/pages/contents/Header";
+import useDocumentTitle from "@app/hooks/useDocumentTitle";
 import { ScopedCssBaseline, Stack } from "@mui/material";
 import { PfButton, PfImage } from "@profabric/react-components";
 import { Edit, Error, Form, FunctionField, ImageInput, Loading, PasswordInput, SaveButton, SimpleForm, TextInput, Toolbar, required, useAuthProvider, useGetIdentity, useGetOne, useNotify } from "react-admin";
@@ -11,6 +12,8 @@ const StyledUserImage = styled(PfImage)`
 `;
 
 export default function Profile() {
+    const [_, setTitle] = useDocumentTitle();
+    setTitle('Profil Saya');
     const navigate = useNavigate();
     const {data: user, isLoading, error} = useGetIdentity();
     
@@ -58,6 +61,8 @@ export default function Profile() {
 }
 
 export const ProfileEdit = () => {
+    const [_, setTitle] = useDocumentTitle();
+    setTitle('Edit Profil');
     const notify = useNotify();
     const navigate = useNavigate();
     const authProvider = useAuthProvider();

@@ -5,8 +5,12 @@ import { Create, Datagrid, Edit, FunctionField, ImageField, ImageInput, List, Pa
 import { ScopedCssBaseline } from "@mui/material";
 import ContentHeader from "@app/components/pages/contents/Header";
 import UserList from "@app/components/tables/Users";
+import useDocumentTitle from "@app/hooks/useDocumentTitle";
+
 
 export default function UsersTable() {
+    const [_, setTitle] = useDocumentTitle();
+    setTitle('List User');
     const [screenSize] = useWindowSizeState();
     function checkSmall () {
         return screenSize == 'xs';
@@ -28,6 +32,8 @@ export default function UsersTable() {
 }
 
 export const UserCreate = () => {
+    const [_, setTitle] = useDocumentTitle();
+    setTitle('Tambah User');
     const breadCrumb = [
         {
             title:"Home",
@@ -67,6 +73,8 @@ export const UserCreate = () => {
 }
 
 export const UserEdit = () => {
+    const [_, setTitle] = useDocumentTitle();
+    setTitle('Edit User');
     const breadCrumb = [
         {
             title:"Home",
