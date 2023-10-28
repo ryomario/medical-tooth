@@ -9,7 +9,7 @@
 @import 'react-toastify/dist/ReactToastify.min.css';
 
 #root {
-  width: 100vw;
+  /* width: 100vw; */
   min-height: 100vh;
 }
 
