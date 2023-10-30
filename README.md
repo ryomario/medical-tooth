@@ -14,6 +14,7 @@ Start the application in development mode by running:
 
 ```sh
 npm run dev
+npm run backend
 ```
 
 ## Production
@@ -32,10 +33,8 @@ You'll find an `.env` file at the project root that includes a `VITE_JSON_SERVER
 
 ## Authentication
 
-The included auth provider should only be used for development and test purposes.
-You'll find a `users.json` file in the `src` directory that includes the users you can use.
-
 You can sign in to the application with the following usernames and password:
+- admin / admin
 - janedoe / password
 - johndoe / password
 

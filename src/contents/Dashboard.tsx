@@ -1,7 +1,10 @@
 import ContentHeader from "@app/components/pages/contents/Header";
 import useDocumentTitle from "@app/hooks/useDocumentTitle";
+import { useEffect } from "react";
+import { useAuthenticated, useCheckAuth } from "react-admin";
 
 export default function Dashboard() {
+    useAuthenticated({params: {from: '/'}});
     const [_, setTitle] = useDocumentTitle();
     setTitle('Dashboard');
     return (

@@ -35,8 +35,17 @@ export const authProvider: AuthProvider = {
     return Promise.resolve();
   },
   checkError: () => Promise.resolve(),
-  checkAuth: () =>
-    localStorage.getItem("user") ? Promise.resolve() : Promise.reject(),
+  checkAuth: ({from}) => {
+    return new Promise((resolve, reject) => {
+      const persistedUser = localStorage.getItem("user");
+      if (persistedUser) {
+        resolve();
+      } else {
+        if (from === '/') window.location.href = '/home.html';
+        reject();
+      }
+    })
+  },
   getPermissions: () => {
     return Promise.resolve(undefined);
   },
