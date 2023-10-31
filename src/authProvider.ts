@@ -21,6 +21,7 @@ export const authProvider: AuthProvider = {
       // eslint-disable-next-line no-unused-vars
       let { password, ...userToPersist } = user;
       localStorage.setItem("user", JSON.stringify(userToPersist));
+      localStorage.setItem("role", user.role == 1 ? "admin" : "student");
       return Promise.resolve();
     }
 
@@ -32,6 +33,7 @@ export const authProvider: AuthProvider = {
   },
   logout: () => {
     localStorage.removeItem("user");
+    localStorage.removeItem("role");
     return Promise.resolve();
   },
   checkError: () => Promise.resolve(),
@@ -47,7 +49,9 @@ export const authProvider: AuthProvider = {
     })
   },
   getPermissions: () => {
-    return Promise.resolve(undefined);
+    const role = localStorage.getItem("role");
+    if (role) return Promise.resolve(role);
+    return Promise.reject();
   },
   getIdentity: () => {
     const persistedUser = localStorage.getItem("user");

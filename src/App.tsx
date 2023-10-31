@@ -44,11 +44,17 @@ export const App = () => {
           title="Medical Tooth"
           dashboard={Dashboard}
         >
-          <Resource name="users" list={UsersTable} create={UserCreate} edit={UserEdit} />
-          <CustomRoutes>
-            <Route path="profile" Component={Profile}/>
-            <Route path="profile/edit" Component={ProfileEdit}/>
-          </CustomRoutes>
+          {permissions => (
+            <>
+              {permissions === "admin" && 
+                <Resource name="users" list={UsersTable} create={UserCreate} edit={UserEdit} />
+              }
+              <CustomRoutes>
+                <Route path="profile" Component={Profile}/>
+                <Route path="profile/edit" Component={ProfileEdit}/>
+              </CustomRoutes>
+            </>
+          )}
         </AdminUI>
       </AdminContext>
     </BrowserRouter>

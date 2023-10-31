@@ -3,6 +3,7 @@ import { PfImage } from "@profabric/react-components";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import MenuItem from "./sidebars/MenuItem";
+import { usePermissions } from "react-admin";
 
 export interface IMenuItem {
     name: string;
@@ -12,6 +13,7 @@ export interface IMenuItem {
     pathRegex? : string;
     children?: Array<IMenuItem>;
     childrenHidden?: boolean;
+    isAdminOnly?: boolean;
 }
 
 export const MENU: IMenuItem[] = [
@@ -28,6 +30,7 @@ export const MENU: IMenuItem[] = [
     {
         name: 'Users',
         icon: 'fas fa-users nav-icon',
+        isAdminOnly: true,
         path: '/users',
         pathRegex: '(/users).*'
     },
@@ -63,8 +66,9 @@ const StyledBrandImage = styled(PfImage)`
 `;
 
 export default function Sidebar() {
-    const [isDarkMode] = useToggleDarkModeState();
     const [sidebarSkin] = useSidebarSkinState();
+
+    const {permissions: role} = usePermissions();
 
     return (
         <aside className={`main-sidebar elevation-4 ${sidebarSkin}`}>
@@ -84,7 +88,7 @@ export default function Sidebar() {
                         className={`nav nav-pills nav-sidebar nav-child-indent flex-column`}
                         role="menu"
                     >
-                        {MENU.map((menuItem: IMenuItem) => menuItem.type != 'header' ? (
+                        {MENU.filter((menuItem: IMenuItem) => role === 'admin' ? true : !menuItem.isAdminOnly).map((menuItem: IMenuItem) => menuItem.type != 'header' ? (
                             <MenuItem
                                 key={menuItem.name + menuItem.path}
                                 menuItem={menuItem}
