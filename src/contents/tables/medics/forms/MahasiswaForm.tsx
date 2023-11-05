@@ -39,7 +39,7 @@ export default function MahasiswaForm({ children }: {children: any}) {
                         </Box>
                         <Box flex={1} mr={{ xs: 0, sm: '0.5em' }}>
                             {" atau "}
-                            <Button size="small" onClick={toogleOpen}>Mahasiswa baru</Button>
+                            <Button size="small" onClick={toogleOpen}>Daftarkan mahasiswa baru</Button>
                         </Box>
                     </Box>
                 </>
