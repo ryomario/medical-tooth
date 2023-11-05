@@ -4,6 +4,7 @@ import { Box, ScopedCssBaseline } from "@mui/material";
 import { Create, ReferenceField, ReferenceInput, TabbedForm } from "react-admin";
 import MahasiswaForm from "./forms/MahasiswaForm";
 import PasienForm from "./forms/PasienForm";
+import KartuStatusForm from "./forms/KartuStatusForm";
 
 export default function AddMedicPage() {
     const [_, setTitle] = useDocumentTitle();
@@ -28,15 +29,17 @@ export default function AddMedicPage() {
                     <ScopedCssBaseline enableColorScheme>
                         <Create redirect="list">
                             <TabbedForm>
-                                <TabbedForm.Tab label="Data Mahasiswa">
+                                <TabbedForm.Tab label="Data Pasien">
                                     <MahasiswaForm>
                                         <ReferenceInput source="mahasiswaId" reference="mahasiswas" isRequired fullWidth/>
                                     </MahasiswaForm>
-                                </TabbedForm.Tab>
-                                <TabbedForm.Tab label="Data Pasien">
+                                    <div className="mb-3"></div>
                                     <PasienForm>
                                         <ReferenceInput source="pasienId" reference="pasiens" isRequired fullWidth/>
                                     </PasienForm>
+                                </TabbedForm.Tab>
+                                <TabbedForm.Tab label="Kartu Status">
+                                    <KartuStatusForm/>
                                 </TabbedForm.Tab>
                             </TabbedForm>
                         </Create>
