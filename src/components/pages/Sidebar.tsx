@@ -39,10 +39,16 @@ export const MENU: IMenuItem[] = [
         type: 'header'
     },
     {
+        name: 'Isi Data Medis',
+        icon: 'fas fa-notes-medical nav-icon',
+        path: '/medics/create',
+        pathRegex: '(/medics/create).*'
+    },
+    {
         name: 'Data Medis',
         icon: 'fas fa-notes-medical nav-icon',
         path: '/medics',
-        pathRegex: '(/medics).*'
+        pathRegex: '(/medics)(?!/create)'
     },
     {
         name: 'Pengaturan',
