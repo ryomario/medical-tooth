@@ -48,7 +48,7 @@ export default function MedicalHistory(props: { className?: string }) {
                     />
                 </Box>
                 <Box mr={{ xs: 0, sm: '0.5em' }}>
-                    <Button hidden={!isValid()} onClick={handleTambah} variant="contained">Tambah</Button>
+                    <Button disabled={!isValid()} onClick={handleTambah} variant="contained" startIcon={<i className="fas fa-plus"/>}>Tambah</Button>
                 </Box>
             </Box>
         </div>
