@@ -1,14 +1,8 @@
 import { Box, Button, Paper, Step, StepContent, StepLabel, Stepper, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import MedicalHistory from "./anamnesa/MedicalHistory";
-import { TextInput } from "react-admin";
-import DentalHistory from "./anamnesa/DentalHistory";
+import DentalHistoryBagian1 from "./dentalHistory/Bagian1";
 
-export type AnamnesaStepProps = {
-    onFinish: () => void
-}
-
-export default function AnamnesaStep({ onFinish }: AnamnesaStepProps) {
+export default function DentalHistory(props: { onFinish: () => void, onGoBack: () => void }) {
     const [activeStep, setActiveStep] = useState(0);
 
     const handleNext = () => {
@@ -24,7 +18,7 @@ export default function AnamnesaStep({ onFinish }: AnamnesaStepProps) {
 
     useEffect(() => {
         if (activeStep === 5) {
-            onFinish();
+            props.onFinish();
         }
     }, [activeStep]);
 
@@ -32,11 +26,12 @@ export default function AnamnesaStep({ onFinish }: AnamnesaStepProps) {
         <>
         <Stepper activeStep={activeStep} orientation="vertical">
             <Step>
-                <StepLabel icon="a">Medical History</StepLabel>
-                <StepContent TransitionProps={{ unmountOnExit: false }}>
-                    <MedicalHistory/>
+                <StepLabel icon="-">Bagian I : Pengalaman Kesehatan Gigi dan Gejala-gejalanya</StepLabel>
+                <StepContent>
+                    <DentalHistoryBagian1/>
+
                     <Box sx={{ mb: 2, mt: 2 }}>
-                        <div>
+                        
                         <Button
                             variant="contained"
                             onClick={handleNext}
@@ -51,16 +46,16 @@ export default function AnamnesaStep({ onFinish }: AnamnesaStepProps) {
                         >
                             Kembali
                         </Button>
-                        </div>
+                        
                     </Box>
                 </StepContent>
             </Step>
             <Step>
-                <StepLabel icon="b">Social History</StepLabel>
+                <StepLabel icon="-">Bagian II : Pemeliharan Kesehatan Gigi dan Mulut Sendiri</StepLabel>
                 <StepContent>
-                    <TextInput source="socialHistory" rows={5} multiline fullWidth resettable/>
+
                     <Box sx={{ mb: 2, mt: 2 }}>
-                        <div>
+                        
                         <Button
                             variant="contained"
                             onClick={handleNext}
@@ -74,28 +69,22 @@ export default function AnamnesaStep({ onFinish }: AnamnesaStepProps) {
                         >
                             Kembali
                         </Button>
-                        </div>
+                        
                     </Box>
                 </StepContent>
             </Step>
             <Step>
-                <StepLabel icon="c">Dental History</StepLabel>
+                <StepLabel icon="-">Bagian III : Camilan Diantara Waktu Makanan</StepLabel>
                 <StepContent>
-                    <DentalHistory onFinish={handleNext} onGoBack={handleBack}/>
-                </StepContent>
-            </Step>
-            <Step>
-                <StepLabel icon="d">Pharmacological History</StepLabel>
-                <StepContent>
-                    
+
                     <Box sx={{ mb: 2, mt: 2 }}>
-                        <div>
+                        
                         <Button
                             variant="contained"
                             onClick={handleNext}
                             sx={{ mt: 1, mr: 1 }}
                         >
-                            Selesai
+                            Lanjut
                         </Button>
                         <Button
                             onClick={handleBack}
@@ -103,7 +92,24 @@ export default function AnamnesaStep({ onFinish }: AnamnesaStepProps) {
                         >
                             Kembali
                         </Button>
-                        </div>
+                        
+                    </Box>
+                </StepContent>
+            </Step>
+            <Step>
+                <StepLabel icon="-">Bagian IV : Keyakinan Tentang Kesehatan Gigi dan Mulut</StepLabel>
+                <StepContent>
+
+                    <Box sx={{ mb: 2, mt: 2 }}>
+                        
+                        <Button
+                            variant="contained"
+                            onClick={handleNext}
+                            sx={{ mt: 1, mr: 1 }}
+                        >
+                            Selesai
+                        </Button>
+                        
                     </Box>
                 </StepContent>
             </Step>
@@ -113,6 +119,7 @@ export default function AnamnesaStep({ onFinish }: AnamnesaStepProps) {
                 <Typography>Semua langkah sudah selesai</Typography>
                 <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>Reset</Button>
                 <Button onClick={handleNext} sx={{ mt: 1, mr: 1 }} variant="contained">Selanjutnya</Button>
+                <Button onClick={props.onGoBack} sx={{ mt: 1, mr: 1 }} >Kembali</Button>
             </Paper>
         )}
         </>
