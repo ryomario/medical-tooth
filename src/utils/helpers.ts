@@ -16,7 +16,7 @@ export const calculateWindowSize = (windowWidth: number) => {
 
 export const setWindowClass = (classList: string) => {
   const window: HTMLElement | null =
-    document && document.getElementById('root');
+    document && document.body;
   if (window) {
     // @ts-ignore
     window.classList = classList;
@@ -24,7 +24,7 @@ export const setWindowClass = (classList: string) => {
 };
 export const addWindowClass = (classList: string) => {
   const window: HTMLElement | null =
-    document && document.getElementById('root');
+    document && document.body;
   if (window) {
     // @ts-ignore
     window.classList.add(classList);
@@ -33,7 +33,7 @@ export const addWindowClass = (classList: string) => {
 
 export const removeWindowClass = (classList: string) => {
   const window: HTMLElement | null =
-    document && document.getElementById('root');
+    document && document.body;
   if (window) {
     // @ts-ignore
     window.classList.remove(classList);
