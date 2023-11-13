@@ -37,13 +37,12 @@ export const authProvider: AuthProvider = {
     return Promise.resolve();
   },
   checkError: () => Promise.resolve(),
-  checkAuth: ({from}) => {
+  checkAuth: () => {
     return new Promise((resolve, reject) => {
       const persistedUser = localStorage.getItem("user");
       if (persistedUser) {
         resolve();
       } else {
-        if (from === '/') window.location.href = '/home.html';
         reject();
       }
     })

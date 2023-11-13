@@ -91,9 +91,11 @@ addWindowClass('layout-fixed');
 // };
 
 // sidebar toggler
+var sidebarOpen: boolean, setSidebarOpen: (val: boolean) => void;
 export const useSidebarTogglerState = (): useSidebarTogglerStateResult => {
-  const [open, setOpen] = useStore<boolean>('sidebar.open', initialState.menuSidebarCollapsed);
-  return [open, () => setOpen(!open)];
+  [sidebarOpen, setSidebarOpen] = useStore<boolean>('sidebar.open', initialState.menuSidebarCollapsed);
+  const toggle = () => {setSidebarOpen(!sidebarOpen)};
+  return [sidebarOpen, toggle];
 };
 export type useSidebarTogglerStateResult = [boolean, () => void];
 

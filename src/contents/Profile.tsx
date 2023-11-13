@@ -2,7 +2,7 @@ import ContentHeader, { BreadCrumbItems } from "@app/components/pages/contents/H
 import useDocumentTitle from "@app/hooks/useDocumentTitle";
 import { ScopedCssBaseline, Stack } from "@mui/material";
 import { PfButton, PfImage } from "@profabric/react-components";
-import { Edit, Error, Form, FunctionField, ImageInput, Loading, PasswordInput, SaveButton, SimpleForm, TextInput, Toolbar, required, useAuthProvider, useGetIdentity, useGetOne, useNotify } from "react-admin";
+import { Edit, Error, Form, FunctionField, ImageInput, Loading, PasswordInput, SaveButton, SimpleForm, TextInput, Toolbar, required, useAuthProvider, useAuthenticated, useGetIdentity, useGetOne, useNotify } from "react-admin";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
@@ -12,6 +12,7 @@ const StyledUserImage = styled(PfImage)`
 `;
 
 export default function Profile() {
+    useAuthenticated();
     const [_, setTitle] = useDocumentTitle();
     setTitle('Profil Saya');
     const navigate = useNavigate();
@@ -61,6 +62,7 @@ export default function Profile() {
 }
 
 export const ProfileEdit = () => {
+    useAuthenticated();
     const [_, setTitle] = useDocumentTitle();
     setTitle('Edit Profil');
     const notify = useNotify();
