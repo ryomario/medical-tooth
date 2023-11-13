@@ -2,6 +2,7 @@ import { Box, Button, Paper, Step, StepContent, StepLabel, Stepper, Typography }
 import { useEffect, useState } from "react";
 import DentalHistoryBagian1 from "./dentalHistory/Bagian1";
 import DentalHistoryBagian2 from "./dentalHistory/Bagian2";
+import DentalHistoryBagian3 from "./dentalHistory/Bagian3";
 
 export default function DentalHistory(props: { onFinish: () => void, onGoBack: () => void }) {
     const [activeStep, setActiveStep] = useState(0);
@@ -54,9 +55,9 @@ export default function DentalHistory(props: { onFinish: () => void, onGoBack: (
             <Step>
                 <StepLabel icon="-">Bagian II : Pemeliharan Kesehatan Gigi dan Mulut Sendiri</StepLabel>
                 <StepContent>
+                    <DentalHistoryBagian2/>
 
                     <Box sx={{ mb: 2, mt: 2 }}>
-                        <DentalHistoryBagian2/>
                         <Button
                             variant="contained"
                             onClick={handleNext}
@@ -77,6 +78,7 @@ export default function DentalHistory(props: { onFinish: () => void, onGoBack: (
             <Step>
                 <StepLabel icon="-">Bagian III : Camilan Diantara Waktu Makanan</StepLabel>
                 <StepContent>
+                    <DentalHistoryBagian3/>
 
                     <Box sx={{ mb: 2, mt: 2 }}>
                         
