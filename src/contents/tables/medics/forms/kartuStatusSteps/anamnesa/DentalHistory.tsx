@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import DentalHistoryBagian1 from "./dentalHistory/Bagian1";
 import DentalHistoryBagian2 from "./dentalHistory/Bagian2";
 import DentalHistoryBagian3 from "./dentalHistory/Bagian3";
+import DentalHistoryBagian4 from "./dentalHistory/Bagian4";
 
 export default function DentalHistory(props: { onFinish: () => void, onGoBack: () => void }) {
     const [activeStep, setActiveStep] = useState(0);
@@ -102,6 +103,7 @@ export default function DentalHistory(props: { onFinish: () => void, onGoBack: (
             <Step>
                 <StepLabel icon="-">Bagian IV : Keyakinan Tentang Kesehatan Gigi dan Mulut</StepLabel>
                 <StepContent>
+                    <DentalHistoryBagian4/>
 
                     <Box sx={{ mb: 2, mt: 2 }}>
                         
