@@ -128,7 +128,7 @@ export default function DentalHistory(props: { onFinish: () => void, onGoBack: (
         <Paper square elevation={0} sx={{ p: 3 }}>
             <Typography>Tombol untuk "Dental History"</Typography>
             <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>Ke Bagian I</Button>
-            <Button onClick={handleNext} sx={{ mt: 1, mr: 1 }} variant="contained">Selanjutnya</Button>
+            <Button onClick={props.onFinish} sx={{ mt: 1, mr: 1 }} variant="contained">Selanjutnya</Button>
             <Button onClick={props.onGoBack} sx={{ mt: 1, mr: 1 }} >Kembali</Button>
         </Paper>
         </>
