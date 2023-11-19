@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import MedicalHistory from "./anamnesa/MedicalHistory";
 import { TextInput } from "react-admin";
 import DentalHistory from "./anamnesa/DentalHistory";
+import PharmacologicalHistory from "./anamnesa/PharmacologicalHistory";
 
 export type AnamnesaStepProps = {
     onFinish: () => void
@@ -87,6 +88,7 @@ export default function AnamnesaStep({ onFinish }: AnamnesaStepProps) {
             <Step>
                 <StepLabel icon="d">Pharmacological History</StepLabel>
                 <StepContent>
+                    <PharmacologicalHistory/>
                     
                     <Box sx={{ mb: 2, mt: 2 }}>
                         <div>

@@ -114,19 +114,23 @@ export default function DentalHistory(props: { onFinish: () => void, onGoBack: (
                         >
                             Selesai
                         </Button>
+                        <Button
+                            onClick={handleBack}
+                            sx={{ mt: 1, mr: 1 }}
+                        >
+                            Kembali
+                        </Button>
                         
                     </Box>
                 </StepContent>
             </Step>
         </Stepper>
-        {activeStep === 4 && (
-            <Paper square elevation={0} sx={{ p: 3 }}>
-                <Typography>Semua langkah sudah selesai</Typography>
-                <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>Reset</Button>
-                <Button onClick={handleNext} sx={{ mt: 1, mr: 1 }} variant="contained">Selanjutnya</Button>
-                <Button onClick={props.onGoBack} sx={{ mt: 1, mr: 1 }} >Kembali</Button>
-            </Paper>
-        )}
+        <Paper square elevation={0} sx={{ p: 3 }}>
+            <Typography>Tombol untuk "Dental History"</Typography>
+            <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>Ke Bagian I</Button>
+            <Button onClick={handleNext} sx={{ mt: 1, mr: 1 }} variant="contained">Selanjutnya</Button>
+            <Button onClick={props.onGoBack} sx={{ mt: 1, mr: 1 }} >Kembali</Button>
+        </Paper>
         </>
     );
 }
