@@ -2,6 +2,7 @@ import { Box, Button, Step, StepContent, StepLabel, Stepper } from "@mui/materia
 import { useState } from "react";
 import AnamnesaStep from "./kartuStatusSteps/AnamnesaStep";
 import VitalSignStep from "./kartuStatusSteps/VitalSignStep";
+import ExtraIntraOral from "./kartuStatusSteps/ExtraIntraOral";
 
 export default function KartuStatusForm() {
     const [activeStep, setActiveStep] = useState(0);
@@ -14,7 +15,7 @@ export default function KartuStatusForm() {
     }
 
     return (
-        <Box>
+        <Box width="100%">
             <Stepper activeStep={activeStep} orientation="vertical">
                 <Step>
                     <StepLabel>Anamnesa</StepLabel>
@@ -26,6 +27,54 @@ export default function KartuStatusForm() {
                     <StepLabel>Tanda-tanda vital</StepLabel>
                     <StepContent>
                         <VitalSignStep/>
+
+                        <Box sx={{ mb: 2, mt: 2 }}>
+                            
+                            <Button
+                                variant="contained"
+                                onClick={handleNext}
+                                sx={{ mt: 1, mr: 1 }}
+                            >
+                                Lanjut
+                            </Button>
+                            <Button
+                                onClick={handleBack}
+                                sx={{ mt: 1, mr: 1 }}
+                            >
+                                Kembali
+                            </Button>
+                            
+                        </Box>
+                    </StepContent>
+                </Step>
+                <Step>
+                    <StepLabel>Ekstra dan Intra Oral</StepLabel>
+                    <StepContent>
+                        <ExtraIntraOral/>
+
+                        <Box sx={{ mb: 2, mt: 2 }}>
+                            
+                            <Button
+                                variant="contained"
+                                onClick={handleNext}
+                                sx={{ mt: 1, mr: 1 }}
+                            >
+                                Lanjut
+                            </Button>
+                            <Button
+                                onClick={handleBack}
+                                sx={{ mt: 1, mr: 1 }}
+                            >
+                                Kembali
+                            </Button>
+                            
+                        </Box>
+                    </StepContent>
+                </Step>
+                <Step>
+                    <StepLabel>Pemeriksaan Oral Hygiene (OHI-S)</StepLabel>
+                    <StepContent>
+                        
 
                         <Box sx={{ mb: 2, mt: 2 }}>
                             
