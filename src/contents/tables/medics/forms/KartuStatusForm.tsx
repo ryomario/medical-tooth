@@ -3,6 +3,7 @@ import { useState } from "react";
 import AnamnesaStep from "./kartuStatusSteps/AnamnesaStep";
 import VitalSignStep from "./kartuStatusSteps/VitalSignStep";
 import ExtraIntraOral from "./kartuStatusSteps/ExtraIntraOral";
+import OHIS from "./kartuStatusSteps/OHIS";
 
 export default function KartuStatusForm() {
     const [activeStep, setActiveStep] = useState(0);
@@ -74,7 +75,7 @@ export default function KartuStatusForm() {
                 <Step>
                     <StepLabel>Pemeriksaan Oral Hygiene (OHI-S)</StepLabel>
                     <StepContent>
-                        
+                        <OHIS/>
 
                         <Box sx={{ mb: 2, mt: 2 }}>
                             
