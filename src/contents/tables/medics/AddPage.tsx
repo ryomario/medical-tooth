@@ -6,6 +6,7 @@ import MahasiswaForm from "./forms/MahasiswaForm";
 import PasienForm from "./forms/PasienForm";
 import KartuStatusForm from "./forms/KartuStatusForm";
 import Askesgilut from "./forms/Askesgilut";
+import InformedConsent from "./forms/InformedConsent";
 
 export default function AddMedicPage() {
     const [_, setTitle] = useDocumentTitle();
@@ -44,6 +45,9 @@ export default function AddMedicPage() {
                                 </TabbedForm.Tab>
                                 <TabbedForm.Tab label="Diagnosis Askesgilut">
                                     <Askesgilut/>
+                                </TabbedForm.Tab>
+                                <TabbedForm.Tab label="Informed Consent">
+                                    <InformedConsent/>
                                 </TabbedForm.Tab>
                             </TabbedForm>
                         </Create>

@@ -1,0 +1,56 @@
+#print-page {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    visibility: visible;
+}
+#print-page p {
+    text-indent: 0.5in;
+    text-align: justify;
+    text-justify: inter-word;
+
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+.page-potrait {
+    margin: 0 auto;
+    width: 19cm;
+}
+.f12 {font-size: 12pt;}
+.f14 {font-size: 14pt;}
+
+.printable.hide {
+    display: none;
+}
+#print-page table tr {
+    vertical-align: top;
+}
+
+/* Only print #print-page */
+@media print {
+    @page {
+        size: 21cm 63cm;
+    }
+    
+    /* body {
+        visibility: hidden;
+        font-size: 12pt;
+        padding: 3cm;
+    } */
+    #print-page {
+        visibility: visible;
+        margin: 3cm auto;
+    }
+    .printable{
+        visibility: visible;
+    }
+    .printable.hide{
+        display: block;
+    }
+    .printable.hide.inline{
+        display: inline-block;
+    }
+    .not-printable {
+        visibility: hidden;
+        display: none;
+    }
+}
