@@ -5,6 +5,7 @@ import VitalSignStep from "./kartuStatusSteps/VitalSignStep";
 import ExtraIntraOral from "./kartuStatusSteps/ExtraIntraOral";
 import OHIS from "./kartuStatusSteps/OHIS";
 import PlaqueControl from "./kartuStatusSteps/PlaqueControl";
+import PenilaianGusi from "./kartuStatusSteps/PenilaianGusi";
 
 export default function KartuStatusForm() {
     const [activeStep, setActiveStep] = useState(0);
@@ -101,6 +102,30 @@ export default function KartuStatusForm() {
                     <StepLabel>Plaque Control</StepLabel>
                     <StepContent>
                         <PlaqueControl/>
+
+                        <Box sx={{ mb: 2, mt: 2 }}>
+                            
+                            <Button
+                                variant="contained"
+                                onClick={handleNext}
+                                sx={{ mt: 1, mr: 1 }}
+                            >
+                                Lanjut
+                            </Button>
+                            <Button
+                                onClick={handleBack}
+                                sx={{ mt: 1, mr: 1 }}
+                            >
+                                Kembali
+                            </Button>
+                            
+                        </Box>
+                    </StepContent>
+                </Step>
+                <Step>
+                    <StepLabel>Penilaian Gusi / Status Periodontal (CPITN)</StepLabel>
+                    <StepContent>
+                        <PenilaianGusi/>
 
                         <Box sx={{ mb: 2, mt: 2 }}>
                             
