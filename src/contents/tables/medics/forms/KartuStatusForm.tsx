@@ -1,4 +1,4 @@
-import { Box, Button, Step, StepContent, StepLabel, Stepper } from "@mui/material";
+import { Box, Button, Paper, Step, StepContent, StepLabel, Stepper, Typography } from "@mui/material";
 import { useState } from "react";
 import AnamnesaStep from "./kartuStatusSteps/AnamnesaStep";
 import VitalSignStep from "./kartuStatusSteps/VitalSignStep";
@@ -15,6 +15,9 @@ export default function KartuStatusForm() {
     }
     const handleBack = () => {
         setActiveStep(prevStep => prevStep - 1);
+    }
+    const handleReset = () => {
+        setActiveStep(0);
     }
 
     return (
@@ -147,6 +150,13 @@ export default function KartuStatusForm() {
                     </StepContent>
                 </Step>
             </Stepper>
+            {activeStep === 6 && (
+                <Paper square elevation={0} sx={{ p: 3 }}>
+                    <Typography>Semua langkah sudah selesai</Typography>
+                    <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>Reset</Button>
+                    {/* <Button onClick={handleNext} sx={{ mt: 1, mr: 1 }} variant="contained">Selanjutnya</Button> */}
+                </Paper>
+            )}
         </Box>
     );
 }

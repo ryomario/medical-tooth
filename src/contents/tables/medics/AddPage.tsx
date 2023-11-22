@@ -5,6 +5,7 @@ import { Create, ReferenceField, ReferenceInput, TabbedForm } from "react-admin"
 import MahasiswaForm from "./forms/MahasiswaForm";
 import PasienForm from "./forms/PasienForm";
 import KartuStatusForm from "./forms/KartuStatusForm";
+import Askesgilut from "./forms/Askesgilut";
 
 export default function AddMedicPage() {
     const [_, setTitle] = useDocumentTitle();
@@ -40,6 +41,9 @@ export default function AddMedicPage() {
                                 </TabbedForm.Tab>
                                 <TabbedForm.Tab label="Kartu Status">
                                     <KartuStatusForm/>
+                                </TabbedForm.Tab>
+                                <TabbedForm.Tab label="Diagnosis Askesgilut">
+                                    <Askesgilut/>
                                 </TabbedForm.Tab>
                             </TabbedForm>
                         </Create>
