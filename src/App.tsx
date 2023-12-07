@@ -6,6 +6,7 @@ import {
   localStorageStore,
   Admin,
   CustomRoutes,
+  EditGuesser,
 } from "react-admin";
 import { dataProvider } from "./dataProvider";
 import { authProvider } from "./authProvider";
@@ -18,6 +19,10 @@ import { calculateWindowSize } from "./utils/helpers";
 import UsersTable, { UserCreate, UserEdit } from "./contents/tables/Users";
 import Dashboard from "./contents/Dashboard";
 import Profile, { ProfileEdit } from "./contents/Profile";
+import MedicsTable from "./contents/tables/Medics";
+import AddMedicPage from "./contents/tables/medics/AddPage";
+import ShowMedicPage from "./contents/tables/medics/ShowPage";
+import EditMedicPage from "./contents/tables/medics/EditPage";
 
 const defaultStore = localStorageStore();
 
@@ -47,8 +52,18 @@ export const App = () => {
           {permissions => (
             <>
               {permissions === "admin" && 
-                <Resource name="users" list={UsersTable} create={UserCreate} edit={UserEdit} />
+                <>
+                  <Resource name="users" list={UsersTable} create={UserCreate} edit={UserEdit} />
+                  <Resource name="medics" list={MedicsTable} create={AddMedicPage} edit={EditMedicPage} show={ShowMedicPage} />
+                </>
               }
+              {permissions === "student" && 
+                <>
+                  <Resource name="medics" create={AddMedicPage} />
+                </>
+              }
+              <Resource name="mahasiswas" recordRepresentation={(record: any) => `${record.nim} - ${record.nama}`} />
+              <Resource name="pasiens" recordRepresentation="nama" />
               <CustomRoutes>
                 <Route path="profile" Component={Profile}/>
                 <Route path="profile/edit" Component={ProfileEdit}/>
