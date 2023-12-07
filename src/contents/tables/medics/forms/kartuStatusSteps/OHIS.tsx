@@ -26,8 +26,6 @@ export default function OHIS() {
                                     margin="none"
                                     sx={{'& .MuiFormHelperText-root': {display: 'none'}}}
                                 />
-                            </Stack>
-                            <Stack direction="row">
                                 <TextInput
                                     source="ohis.debrisIndex.index.i_3"
                                     label=""
@@ -35,8 +33,24 @@ export default function OHIS() {
                                     margin="none"
                                     sx={{'& .MuiFormHelperText-root': {display: 'none'}}}
                                 />
+                            </Stack>
+                            <Stack direction="row">
                                 <TextInput
                                     source="ohis.debrisIndex.index.i_4"
+                                    label=""
+                                    variant="outlined"
+                                    margin="none"
+                                    sx={{'& .MuiFormHelperText-root': {display: 'none'}}}
+                                />
+                                <TextInput
+                                    source="ohis.debrisIndex.index.i_5"
+                                    label=""
+                                    variant="outlined"
+                                    margin="none"
+                                    sx={{'& .MuiFormHelperText-root': {display: 'none'}}}
+                                />
+                                <TextInput
+                                    source="ohis.debrisIndex.index.i_6"
                                     label=""
                                     variant="outlined"
                                     margin="none"
@@ -73,8 +87,6 @@ export default function OHIS() {
                                     margin="none"
                                     sx={{'& .MuiFormHelperText-root': {display: 'none'}}}
                                 />
-                            </Stack>
-                            <Stack direction="row">
                                 <TextInput
                                     source="ohis.calculusIndex.index.i_3"
                                     label=""
@@ -82,8 +94,24 @@ export default function OHIS() {
                                     margin="none"
                                     sx={{'& .MuiFormHelperText-root': {display: 'none'}}}
                                 />
+                            </Stack>
+                            <Stack direction="row">
                                 <TextInput
                                     source="ohis.calculusIndex.index.i_4"
+                                    label=""
+                                    variant="outlined"
+                                    margin="none"
+                                    sx={{'& .MuiFormHelperText-root': {display: 'none'}}}
+                                />
+                                <TextInput
+                                    source="ohis.calculusIndex.index.i_5"
+                                    label=""
+                                    variant="outlined"
+                                    margin="none"
+                                    sx={{'& .MuiFormHelperText-root': {display: 'none'}}}
+                                />
+                                <TextInput
+                                    source="ohis.calculusIndex.index.i_6"
                                     label=""
                                     variant="outlined"
                                     margin="none"

@@ -1,5 +1,9 @@
 .plaque-control {
+    --size-square: 50px;
     overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .plaque-control .plaque-control-row {
     width: max-content;
@@ -26,11 +30,12 @@
     align-items: center;
 }
 .plaque-control-square {
+    --size-square-05: calc(var(--size-square)/2);
     --color: white;
     display: block;
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: var(--size-square);
+    height: var(--size-square);
     box-sizing: border-box;
     background-color: black;
 }
@@ -58,15 +63,18 @@
     cursor: pointer;
     background-color: var(--color);
 }
+.plaque-control-square input:disabled+.triangle{
+    cursor: default;
+}
 .plaque-control-square .plaque-control-triangleUp {
-    clip-path: polygon(25px 24px, 1px 1px, 49px 1px);
+    clip-path: polygon(var(--size-square-05) calc(var(--size-square-05) - 1px), 1px 1px, calc(var(--size-square) - 1px) 1px);
 }
 .plaque-control-square .plaque-control-triangleDown {
-    clip-path: polygon(25px 26px, 1px 49px, 49px 49px);
+    clip-path: polygon(var(--size-square-05) calc(var(--size-square-05) + 1px), 1px calc(var(--size-square) - 1px), calc(var(--size-square) - 1px) calc(var(--size-square) - 1px));
 }
 .plaque-control-square .plaque-control-triangleLeft {
-    clip-path: polygon(24px 25px, 1px 1px, 1px 49px);
+    clip-path: polygon(calc(var(--size-square-05) - 1px) var(--size-square-05), 1px 1px, 1px calc(var(--size-square) - 1px));
 }
 .plaque-control-square .plaque-control-triangleRight {
-    clip-path: polygon(26px 25px, 49px 49px, 49px 1px);
+    clip-path: polygon(calc(var(--size-square-05) + 1px) var(--size-square-05), calc(var(--size-square) - 1px) calc(var(--size-square) - 1px), calc(var(--size-square) - 1px) 1px);
 }

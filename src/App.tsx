@@ -21,6 +21,8 @@ import Dashboard from "./contents/Dashboard";
 import Profile, { ProfileEdit } from "./contents/Profile";
 import MedicsTable from "./contents/tables/Medics";
 import AddMedicPage from "./contents/tables/medics/AddPage";
+import ShowMedicPage from "./contents/tables/medics/ShowPage";
+import EditMedicPage from "./contents/tables/medics/EditPage";
 
 const defaultStore = localStorageStore();
 
@@ -52,7 +54,12 @@ export const App = () => {
               {permissions === "admin" && 
                 <>
                   <Resource name="users" list={UsersTable} create={UserCreate} edit={UserEdit} />
-                  <Resource name="medics" list={MedicsTable} create={AddMedicPage} edit={EditGuesser} />
+                  <Resource name="medics" list={MedicsTable} create={AddMedicPage} edit={EditMedicPage} show={ShowMedicPage} />
+                </>
+              }
+              {permissions === "student" && 
+                <>
+                  <Resource name="medics" create={AddMedicPage} />
                 </>
               }
               <Resource name="mahasiswas" recordRepresentation={(record: any) => `${record.nim} - ${record.nama}`} />

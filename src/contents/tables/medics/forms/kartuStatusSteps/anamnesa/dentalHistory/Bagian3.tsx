@@ -1,10 +1,8 @@
+import { DentalHistoryInputs } from "@app/constants/medicFormInputs";
 import { Box, Checkbox, FormControlLabel, InputAdornment, Typography } from "@mui/material";
 import { ArrayInput, BooleanInput, NumberInput, SimpleFormIterator, TextInput } from "react-admin";
 
-const defaultValue = [
-    "Permen mint", "Minuman kaleng/botol", "Obat syrup", "Minuman manis", "Permen karet",
-    "Keripik", "Buah kering", "Kerupuk", "Kue kering"
-].map(item => ({"namaCamilan":item,"frekuensiMakan":null}));
+const defaultValue = DentalHistoryInputs.camilanWaktuMakans.map((item:any) => ({"namaCamilan":item,"frekuensiMakan":null}));
 
 export default function DentalHistoryBagian3() {
 

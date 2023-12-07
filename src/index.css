@@ -8,6 +8,8 @@
 
 @import 'react-toastify/dist/ReactToastify.min.css';
 
+@import url(./contents/tables/medics/views/printStyle.css);
+
 #root {
   /* width: 100vw; */
   min-height: 100vh;

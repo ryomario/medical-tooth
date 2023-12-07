@@ -56,7 +56,6 @@ export default function PharmacologicalHistory() {
                 helperText="Jika poin 4 memilih 'Iya'"
             />
             <RadioButtonGroupInput
-                fullWidth
                 source="pharmacologicalHistory.apaKonsumsiObatTeratur"
                 label="5. Apakah anda mengkonsumsi obat tersebut secara teratur?"
                 choices={[{id:'Ya', name:'Ya'},{id:'Tidak',name:'Tidak'}]}

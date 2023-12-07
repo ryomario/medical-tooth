@@ -1,16 +1,6 @@
+import { AskesgilutInputs } from "@app/constants/medicFormInputs";
 import { Box, Grid, InputLabel, Typography } from "@mui/material";
 import { DateTimeInput, TextInput } from "react-admin";
-
-const inputFields = [
-    {id: 'askesgilut.diagnosis.perlindunganResikoKesehatan', label: '1. Perlindungan dari resiko kesehatan'},
-    {id: 'askesgilut.diagnosis.bebasDariKetakutanAtauStress', label: '2. Bebas dari ketakutan/stres'},
-    {id: 'askesgilut.diagnosis.kesanWajahSehat', label: '3. Kesan wajah yang sehat'},
-    {id: 'askesgilut.diagnosis.keutuhanKulitDanMembranMukosaPadaLeherKepala', label: '4. Keutuhan kulit dan membran Mukosa pada leher dan kepala'},
-    {id: 'askesgilut.diagnosis.kondisiDanFungsiGigiGeligiYangBaik', label: '5. Kondisi biologis dan fungsi gigi geligi yang baik'},
-    {id: 'askesgilut.diagnosis.konseptualisasiDanPemecahanMasalah', label: '6. Konseptualisasi dan pemecahan masalah'},
-    {id: 'askesgilut.diagnosis.bebasNyeriKepalaLeher', label: '7. Bebas dari nyeri pada kepala dan leher'},
-    {id: 'askesgilut.diagnosis.tanggungJawabKesehatanGigiDanMulut', label: '8. Tanggung jawab terhadap kesehatan gigi dan mulutnya'},
-];
 
 export default function Askesgilut() {
     return (
@@ -18,7 +8,7 @@ export default function Askesgilut() {
             <Typography>Diagnosis, Perencanaan, Implementasi dan Evaluasi Askesgilut</Typography>
             <hr/>
             <Grid container spacing={{ xs: 0, sm: 1 }} columns={{ xs: 1, sm: 12 }}>
-                {inputFields.map((field, index) => (
+                {AskesgilutInputs.diagnosis.map((field, index) => (
                     <Grid item xs={1} sm={6} key={index}>
                         <TextInput
                             fullWidth

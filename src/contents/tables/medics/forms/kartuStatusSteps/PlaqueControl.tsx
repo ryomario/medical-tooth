@@ -13,7 +13,6 @@ export default function PlaqueControl() {
     }
     const handleChangeTot = (event: any) => {
         event.preventDefault();
-        console.log(event);
         setTot(event.target.value);
     }
     useEffect(()=>{

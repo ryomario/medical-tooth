@@ -1,8 +1,7 @@
-import { Error, FileField, FileInput, Loading, ReferenceInput, useGetOne, useInput, useUpdate } from "react-admin";
-import "./printStyle.css";
 import { useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
 import { Button } from "@mui/material";
+import Header from "./prints/Header";
 
 const titikTitik = "....................";
 
@@ -43,13 +42,10 @@ export default function InformedConsent() {
     
     return (
         <>
-            <FileInput source="informedConsentFile" label="Upload dokumen" helperText="Upload dokumen yang sudah ditandatangani oleh pihak terkait">
-                <FileField source="src" title="title"/>
-            </FileInput>
-            <br />
             <center><Button onClick={handlePrint} color="info" variant="contained">Print</Button></center>
             <br/>
-            <div id="print-page" className="page-potrait" ref={printableCompRef}>
+            <div className="print-page page-potrait" ref={printableCompRef}>
+                <Header/>
                 <span className="f14"><b>Informed Consent</b></span>
                 <br/>
                 <br/>
@@ -60,12 +56,12 @@ export default function InformedConsent() {
                             <td colSpan={3} width="50%"><span><b>Orang tua / Wali pasien</b></span></td>
                         </tr>
                         <tr>
-                            <td width="10%">Nama</td><td>:</td><td><span className="printable hide">{data.namaPasien}</span><input className="not-printable" type="text" name="namaPasien" value={data.namaPasien} onChange={handleChange}/></td>
-                            <td width="10%">Nama</td><td>:</td><td><span className="printable hide">{data.namaWali}</span><input className="not-printable" type="text" name="namaWali" value={data.namaWali} onChange={handleChange}/></td>
+                            <td width="15%">Nama</td><td>:</td><td><span className="printable hide inline">{data.namaPasien}</span><input className="not-printable" type="text" name="namaPasien" value={data.namaPasien} onChange={handleChange}/></td>
+                            <td width="15%">Nama</td><td>:</td><td><span className="printable hide inline">{data.namaWali}</span><input className="not-printable" type="text" name="namaWali" value={data.namaWali} onChange={handleChange}/></td>
                         </tr>
                         <tr>
-                            <td>Umur</td><td>:</td><td><span className="printable hide">{data.umurPasien}</span><input className="not-printable" type="number" min={0} name="umurPasien" value={data.umurPasien} onChange={handleChange}/></td>
-                            <td>Umur</td><td>:</td><td><span className="printable hide">{data.umurWali}</span><input className="not-printable" type="number" min={0} name="umurWali" value={data.umurWali} onChange={handleChange}/></td>
+                            <td>Umur</td><td>:</td><td><span className="printable hide inline">{data.umurPasien}</span><input className="not-printable" type="number" min={0} name="umurPasien" value={data.umurPasien} onChange={handleChange}/></td>
+                            <td>Umur</td><td>:</td><td><span className="printable hide inline">{data.umurWali}</span><input className="not-printable" type="number" min={0} name="umurWali" value={data.umurWali} onChange={handleChange}/></td>
                         </tr>
                         <tr>
                             <td>Alamat</td><td>:</td><td><span className="printable hide">{data.alamatPasien}</span><input className="not-printable" type="text" name="alamatPasien" value={data.alamatPasien} onChange={handleChange}/></td>

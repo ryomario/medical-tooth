@@ -1,15 +1,15 @@
 import ContentHeader from "@app/components/pages/contents/Header";
 import useDocumentTitle from "@app/hooks/useDocumentTitle";
 import { Box, ScopedCssBaseline, Typography } from "@mui/material";
-import { Create, DateInput, FileField, FileInput, ReferenceField, ReferenceInput, TabbedForm } from "react-admin";
+import { Create, DateInput, Edit, FileField, FileInput, ReferenceField, ReferenceInput, TabbedForm } from "react-admin";
 import MahasiswaForm from "./forms/MahasiswaForm";
 import PasienForm from "./forms/PasienForm";
 import KartuStatusForm from "./forms/KartuStatusForm";
 import Askesgilut from "./forms/Askesgilut";
 
-export default function AddMedicPage() {
+export default function EditMedicPage() {
     const [_, setTitle] = useDocumentTitle();
-    setTitle('Input Data Medis');
+    setTitle('Ubah Data Medis');
     const breadCrumb = [
         {
             title:"Home",
@@ -18,17 +18,17 @@ export default function AddMedicPage() {
             title:"Tabel Data Medis",
             url:"/medics"
         },{
-            title:"Tambah",
+            title:"Ubah",
             active:true
         }
     ];
     return (
         <>
-            <ContentHeader title="Tambah data medis" breadcrumb={breadCrumb}/>
+            <ContentHeader title="Ubah data medis" breadcrumb={breadCrumb}/>
             <section className="content">
                 <div className="contianer-fluid">
                     <ScopedCssBaseline enableColorScheme>
-                        <Create redirect="show">
+                        <Edit redirect="show">
                             <TabbedForm>
                                 <TabbedForm.Tab label="Data Pasien">
                                     <MahasiswaForm>
@@ -54,7 +54,7 @@ export default function AddMedicPage() {
                                     </FileInput>
                                 </TabbedForm.Tab>
                             </TabbedForm>
-                        </Create>
+                        </Edit>
                     </ScopedCssBaseline>
                 </div>
             </section>
