@@ -1,0 +1,80 @@
+.plaque-control {
+    --size-square: 50px;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.plaque-control .plaque-control-row {
+    width: max-content;
+}
+.plaque-control .plaque-control-item, .plaque-control-box {
+    display: flex;
+    flex-direction: column;
+}
+.plaque-control .plaque-control-row, .plaque-control-item-row  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.plaque-control .plaque-control-row:nth-child(2) .plaque-control-square {
+    order: -1;
+}
+.plaque-control .plaque-control-item.flex-end {
+    align-items: flex-end;
+}
+.plaque-control .plaque-control-item.flex-start {
+    align-items: flex-start;
+}
+.plaque-control-box {
+    align-items: center;
+}
+.plaque-control-square {
+    --size-square-05: calc(var(--size-square)/2);
+    --color: white;
+    display: block;
+    position: relative;
+    width: var(--size-square);
+    height: var(--size-square);
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.plaque-control-square > * {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.plaque-control-square input {
+    display: none;
+}
+
+.plaque-control-square input:checked+.triangle {
+    --color: #56baed;
+}
+.plaque-control-square .triangle {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: var(--color);
+}
+.plaque-control-square input:disabled+.triangle{
+    cursor: default;
+}
+.plaque-control-square .plaque-control-triangleUp {
+    clip-path: polygon(var(--size-square-05) calc(var(--size-square-05) - 1px), 1px 1px, calc(var(--size-square) - 1px) 1px);
+}
+.plaque-control-square .plaque-control-triangleDown {
+    clip-path: polygon(var(--size-square-05) calc(var(--size-square-05) + 1px), 1px calc(var(--size-square) - 1px), calc(var(--size-square) - 1px) calc(var(--size-square) - 1px));
+}
+.plaque-control-square .plaque-control-triangleLeft {
+    clip-path: polygon(calc(var(--size-square-05) - 1px) var(--size-square-05), 1px 1px, 1px calc(var(--size-square) - 1px));
+}
+.plaque-control-square .plaque-control-triangleRight {
+    clip-path: polygon(calc(var(--size-square-05) + 1px) var(--size-square-05), calc(var(--size-square) - 1px) calc(var(--size-square) - 1px), calc(var(--size-square) - 1px) 1px);
+}

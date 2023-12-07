@@ -27,53 +27,1506 @@
   ],
   "mahasiswas": [
     {
-      "id": 0,
-      "nim": "195410190",
-      "nama": "Ahmad Dani"
-    },
-    {
       "nim": "195410194",
       "nama": "Mario",
       "id": 1
-    },
-    {
-      "nim": "195410193",
-      "nama": "Machfud",
-      "id": 2
-    },
-    {
-      "nim": "193948",
-      "nama": "iko",
-      "id": 3
-    },
-    {
-      "nim": "195401902",
-      "nama": "Eka",
-      "id": 4
     }
   ],
   "pasiens": [
     {
-      "id": 0,
-      "nama": "Ahmad Dani",
-      "tgl-lahir": "20 April 2000",
-      "alamat": null,
-      "hp": null,
-      "jk": "Laki-laki",
-      "golDar": "O",
-      "agama": "islam",
-      "tBadan": null,
-      "bBadan": null
+      "nama": "Ahmad Dani Yuliyanto",
+      "tgl-lahir": "",
+      "alamat": "",
+      "hp": "",
+      "jk": "L",
+      "golDar": "",
+      "agama": "Islam",
+      "tBadan": "",
+      "bBadan": "",
+      "id": 1
+    },
+    {
+      "nama": "Machfud Mubaraq S",
+      "tgl-lahir": "",
+      "alamat": "",
+      "hp": "",
+      "jk": "L",
+      "golDar": "",
+      "agama": "",
+      "tBadan": "",
+      "bBadan": "",
+      "id": 2
+    },
+    {
+      "nama": "Mario",
+      "tgl-lahir": "2001-02-18",
+      "alamat": "Pati",
+      "hp": "",
+      "jk": "L",
+      "golDar": "",
+      "agama": "",
+      "tBadan": "",
+      "bBadan": "",
+      "id": 3
+    },
+    {
+      "nama": "Riko Amamia",
+      "tgl-lahir": "2002-05-10",
+      "alamat": "Juwana",
+      "hp": "",
+      "jk": "P",
+      "golDar": "",
+      "agama": "Islam",
+      "tBadan": "",
+      "bBadan": "",
+      "id": 4
     }
   ],
   "medics": [
     {
-      "id": 0,
-      "userId": 2,
-      "mahasiswaId": 0,
-      "pasienId": 0,
-      "no": "01",
-      "tglKunjungan": "2017-04-23"
+      "mahasiswaId": 1,
+      "pasienId": 4,
+      "tgl-kunjungan": "11/23/2023",
+      "medicalHistory": [
+        "Pasien merasa dalam keadaan sehat",
+        "Alergi makanan",
+        "Alergi bulu kucing"
+      ],
+      "askesgilut": {
+        "diagnosis": {
+          "perlindunganResikoKesehatan": "Pakau behel",
+          "bebasDariKetakutanAtauStress": "Tidak takut",
+          "kesanWajahSehat": "Sumringah",
+          "keutuhanKulitDanMembranMukosaPadaLeherKepala": "Mulus",
+          "kondisiDanFungsiGigiGeligiYangBaik": "Berjalan baik",
+          "tanggungJawabKesehatanGigiDanMulut": "Tidak yakin",
+          "kebutuhanTidakTerpenuhi": "Sikat gigi 3 kali sehari",
+          "penyebabKebutuhanTidakTerpenuhi": "Tidak ada waktu",
+          "tandaDanGejala": "Malas ke Toilet",
+          "pernyataanEvaluatif": "Cukup minum obat"
+        },
+        "kunjunganSelanjutnya": "2023-11-30T17:06:00.000Z",
+        "rekomendasiPerawatanSelanjutnya": "Minum obatnya sebelum makan dan sesudah makan"
+      },
+      "socialHistory": "Hanya keluar rumah untuk makan tiap 3 kali sehari",
+      "dentalHistory": {
+        "alasanKunjunganKlinikGigi": "Gigi cenut-cenut selama 3 hari",
+        "yangInginDiketahuiDalamMulut": [
+          "Kerusakan gigi",
+          "Penyakit pada gusi"
+        ],
+        "pernahRontgenMulutDuaTahunTerakhir": "Tidak",
+        "pernahMengalamiMasalahGigi": "Ya",
+        "pengalamanMasalahGigi": "Cabut gigi karena berlubang",
+        "pendapatPadaKunjunganKlinikGigiSebelumnya": "Agak cemas/takut",
+        "pendapatPernyataanKesehatanGigiMemengaruhiKesehatanUmum": "Tidak setuju",
+        "gejala": [
+          "Gigi sensitif",
+          "Sakit gigi",
+          "Sakit gusi",
+          "Bengkak"
+        ],
+        "gigiBergemeretakSiangAtauMalam": "Tidak",
+        "apaMengenakanPelingdungGigitan": "Tidak",
+        "apaCemasTentangAromaNafasTampilanGigiWajah": "Ya",
+        "dianggapBermasalah": [
+          "Gigi menguning / berubah warna",
+          "Noda pada permukaan gigi"
+        ],
+        "pernahCederaGigiWajahRahang": "Ya",
+        "penjelasanCederaGigiWajahRahang": "Wajah area bawah hidung pernah terbakar karena gesekan benang",
+        "mengalamiMenggunakanSesuatu": [
+          "Pencabutan gigi"
+        ],
+        "bag2": {
+          "halYangSeringDigunakan": [
+            "Air minum berfluoride",
+            "Air dalam botol/kemasaan",
+            "Tusuk gigi",
+            "Sikat gigi dengan bulu sikat sedang",
+            "Obat kumur",
+            "Pasta/gel fluor"
+          ],
+          "halYangSeringDigunakanLainnya": "Gigi palsu, kumur listerine",
+          "keunggulanPastaGigiYangDigunakan": [
+            "Perlindungan gigi sensitif",
+            "Beraroma mint"
+          ],
+          "berapaMenitMembersihkanGigiDanGusiSendiri": {
+            "denganSikat": 2,
+            "denganBenangGigi": null
+          },
+          "frekuensiMembersihkanGigiDanGusiSendiri": {
+            "denganSikat": {
+              "frekuensi": 1,
+              "satuan": "minggu"
+            },
+            "denganBenangGigi": {
+              "frekuensi": null
+            }
+          },
+          "apaKesulitanMengaturJadwalSikatGigi": "Ya",
+          "kesulitanMembersihkanGigi": [],
+          "apaRutinMemeriksaTiapBulanUntukTahuKankerMulut": "Tidak",
+          "kebiasaan": [
+            "Menggigit benda keras",
+            "Menggertakkan gigi"
+          ]
+        },
+        "bag3": {
+          "camilanWaktuMakans": [
+            {
+              "namaCamilan": "Permen mint",
+              "frekuensiMakan": null
+            },
+            {
+              "namaCamilan": "Minuman kaleng/botol",
+              "frekuensiMakan": 1
+            },
+            {
+              "namaCamilan": "Obat syrup",
+              "frekuensiMakan": null
+            },
+            {
+              "namaCamilan": "Minuman manis",
+              "frekuensiMakan": 3
+            },
+            {
+              "namaCamilan": "Permen karet",
+              "frekuensiMakan": 2
+            },
+            {
+              "namaCamilan": "Keripik",
+              "frekuensiMakan": 5
+            },
+            {
+              "namaCamilan": "Buah kering",
+              "frekuensiMakan": null
+            },
+            {
+              "namaCamilan": "Kerupuk",
+              "frekuensiMakan": 5
+            },
+            {
+              "namaCamilan": "Kue kering",
+              "frekuensiMakan": 3
+            }
+          ]
+        },
+        "bag4": {
+          "pendapanAndaKemungkinanAdaMasalahGigiDaripadaOranglain": "Sedikit diatas rata-rata",
+          "pentingnyaMencegahMasalahGigi": "Sangat penting",
+          "apaAndaPercayaDapatMenjagaKesehatanGigi": "Tidak",
+          "seberapaTinggiAndaPercayaPadaKesehatanGigi": "Cukup"
+        }
+      },
+      "pharmacologicalHistory": {
+        "pernahKonsumsiObat": {
+          "pernah": "Ya",
+          "jenisNamaObat": "Obat rambut",
+          "untukApa": "Menjaga kesehatan rambut"
+        },
+        "efekSampingObat": "Aroma menyengat",
+        "pengaruhPositifObat": "Rambut lebih lebat",
+        "masalahDosisObat": {
+          "apaAda": "Tidak"
+        },
+        "apaKonsumsiObatTeratur": "Tidak"
+      },
+      "vitalSign": [
+        {
+          "tekananDarah": {
+            "tekanan": {
+              "atas": 190,
+              "bawah": 80
+            }
+          },
+          "tekananDarahBPM": 120,
+          "tekananDarahRPM": 89,
+          "tglPeriksa": "2023-11-23"
+        }
+      ],
+      "extraIntra": {
+        "extraOral": {
+          "skin1": {
+            "nama": "kiri",
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "skin2": {
+            "nama": "kanan",
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "O"
+          },
+          "vermilionBorders": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "N",
+            "NO4": "O"
+          },
+          "parotidGlands": {
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "O",
+            "NO4": "O"
+          },
+          "lymphNodes": {
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "O"
+          },
+          "anteriorCervical": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "O",
+            "NO4": "O"
+          },
+          "posteriorCervical": {
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "O",
+            "NO4": "N"
+          },
+          "submental": {
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "O",
+            "NO4": "N"
+          },
+          "submandibular": {
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "supraclavicular": {
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "O",
+            "NO4": "O"
+          }
+        },
+        "intraOral": {
+          "labialMucosa": {
+            "nama": "atas",
+            "NO1": "N",
+            "NO2": "O",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "labialVestibules": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "O",
+            "NO4": "O"
+          },
+          "anteriorGingivae": {
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "buccalVestibules": {
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "O",
+            "NO4": "N"
+          },
+          "buccalGingivae": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "N",
+            "NO4": "O"
+          },
+          "tongueDorsal": {
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "tongueVentral": {
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "O"
+          },
+          "tongueLateral": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "O",
+            "NO4": "O"
+          },
+          "lingualTonsils": {
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "floorOfMouth": {
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "O",
+            "NO4": "N"
+          },
+          "lingualGingivae": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "O",
+            "NO4": "O"
+          },
+          "tonsillarPilars": {
+            "NO1": "N",
+            "NO2": "O",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "pharyngealWall": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "softPalate": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "uvula": {
+            "NO1": "N",
+            "NO2": "O",
+            "NO3": "O",
+            "NO4": "O"
+          },
+          "hardPalate": {
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "palateGingivae": {
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "O",
+            "NO4": "O"
+          },
+          "submandibularGlands": {
+            "NO1": "N",
+            "NO2": "O",
+            "NO3": "N",
+            "NO4": "N"
+          }
+        }
+      },
+      "ohis": {
+        "debrisIndex": {
+          "index": {
+            "i_1": "7",
+            "i_2": "4",
+            "i_3": "3",
+            "i_4": "7",
+            "i_5": "4",
+            "i_6": "5"
+          },
+          "value": "89"
+        },
+        "calculusIndex": {
+          "index": {
+            "i_1": "4",
+            "i_2": "6",
+            "i_3": "9",
+            "i_4": "3",
+            "i_5": "4",
+            "i_6": "4"
+          },
+          "value": "76"
+        },
+        "value": "15",
+        "kriteria": "S"
+      },
+      "plaqueControl": {
+        "kunjunganKe": 1,
+        "controls": {
+          "control_18": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_17": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_16": {
+            "up": false,
+            "down": false,
+            "left": "true",
+            "right": false
+          },
+          "control_15": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_14": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_13": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": "true"
+          },
+          "control_12": {
+            "up": false,
+            "down": "true",
+            "left": false,
+            "right": false
+          },
+          "control_11": {
+            "up": false,
+            "down": "true",
+            "left": false,
+            "right": false
+          },
+          "control_55": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_54": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_53": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_52": {
+            "up": false,
+            "down": false,
+            "left": "true",
+            "right": false
+          },
+          "control_51": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": "true"
+          },
+          "control_21": {
+            "up": "true",
+            "down": false,
+            "left": false,
+            "right": "true"
+          },
+          "control_22": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_23": {
+            "up": false,
+            "down": false,
+            "left": "true",
+            "right": false
+          },
+          "control_24": {
+            "up": false,
+            "down": false,
+            "left": "true",
+            "right": false
+          },
+          "control_25": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_26": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_27": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_28": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_61": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_62": {
+            "up": false,
+            "down": "true",
+            "left": false,
+            "right": false
+          },
+          "control_63": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_64": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_65": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_85": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_84": {
+            "up": false,
+            "down": false,
+            "left": "true",
+            "right": false
+          },
+          "control_83": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_82": {
+            "up": "true",
+            "down": false,
+            "left": false,
+            "right": "true"
+          },
+          "control_81": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_48": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_47": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_46": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_45": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_44": {
+            "up": false,
+            "down": "true",
+            "left": false,
+            "right": false
+          },
+          "control_43": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_42": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_41": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_71": {
+            "up": false,
+            "down": false,
+            "left": "true",
+            "right": false
+          },
+          "control_72": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_73": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_74": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_75": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_31": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": "true"
+          },
+          "control_32": {
+            "up": false,
+            "down": "true",
+            "left": false,
+            "right": false
+          },
+          "control_33": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_34": {
+            "up": "true",
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_35": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_36": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_37": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_38": {
+            "up": false,
+            "down": "true",
+            "left": "true",
+            "right": false
+          }
+        },
+        "totSkor": 7,
+        "tot": 56,
+        "skor": 5,
+        "kategori": "Buruk"
+      },
+      "penilaianGusi": {
+        "sextan1": "5",
+        "sextan2": "E",
+        "sextan3": "0",
+        "sextan4": "4",
+        "sextan5": "6",
+        "sextan6": "2"
+      },
+      "id": 4
+    },
+    {
+      "tgl-kunjungan": "12/7/2023",
+      "mahasiswaId": 1,
+      "pasienId": 2,
+      "medicalHistory": [
+        "Selama 5 tahun terakhir, pasien pernah dinyatakan mengalami penyakit serius, menjalani operasi dan atau di rawat inap di rumah sakit, yaitu sakit/operasi.",
+        "Alergi makanan",
+        "Alergi obat-obatan",
+        "Alergi obat yang disuntik (obat bius)",
+        "Alergi cuaca",
+        "Kurang tidur"
+      ],
+      "askesgilut": {
+        "diagnosis": {
+          "perlindunganResikoKesehatan": "Baju anti api",
+          "bebasDariKetakutanAtauStress": "Tentu saja",
+          "keutuhanKulitDanMembranMukosaPadaLeherKepala": "Selalu",
+          "kondisiDanFungsiGigiGeligiYangBaik": "Iya",
+          "tanggungJawabKesehatanGigiDanMulut": "Dijaga",
+          "kebutuhanTidakTerpenuhi": "Makan indomie",
+          "penyebabKebutuhanTidakTerpenuhi": "Tidak ada kompor",
+          "tandaDanGejala": "Lapar",
+          "tujuanYangBerpusatKlien": "Makan kenyang",
+          "pernyataanEvaluatif": "Kurang makan"
+        },
+        "kunjunganSelanjutnya": "2023-12-31T15:16:00.000Z",
+        "rekomendasiPerawatanSelanjutnya": "Bawa makanan dari rumah"
+      },
+      "socialHistory": "Tidak pernah keluar rumah, sekali keluar langsung lupa rumah",
+      "dentalHistory": {
+        "alasanKunjunganKlinikGigi": "Cabut gigi",
+        "yangInginDiketahuiDalamMulut": [
+          "Kerusakan gigi"
+        ],
+        "pernahRontgenMulutDuaTahunTerakhir": "Tidak",
+        "pernahMengalamiMasalahGigi": "Ya",
+        "pengalamanMasalahGigi": "Gigi cenat cenut saat minum air dingin",
+        "pendapatPadaKunjunganKlinikGigiSebelumnya": "Tidak penting sama sekali",
+        "pendapatPernyataanKesehatanGigiMemengaruhiKesehatanUmum": "Setuju",
+        "gejala": [
+          "Gigi sensitif",
+          "Sakit pada rahang",
+          "Sakit gigi",
+          "Sakit gusi",
+          "Mulut kering",
+          "Bengkak"
+        ],
+        "gigiBergemeretakSiangAtauMalam": "Ya",
+        "apaMengenakanPelingdungGigitan": "Tidak",
+        "apaCemasTentangAromaNafasTampilanGigiWajah": "Ya",
+        "dianggapBermasalah": [
+          "Gigi menguning / berubah warna",
+          "Jarak antar gigi (renggang)",
+          "Noda pada permukaan gigi"
+        ],
+        "pernahCederaGigiWajahRahang": "Tidak",
+        "mengalamiMenggunakanSesuatu": [
+          "Karang gigi",
+          "Rasa sakit pada leher dan kepala"
+        ],
+        "mengalamiMenggunakanSesuatuLainnya": "Gigi mainan,Gigi palsu vampir",
+        "bag2": {
+          "halYangSeringDigunakan": [
+            "Sikat gigi dengan bulu sikat lunak",
+            "Air minum berfluoride",
+            "Air dalam botol/kemasaan",
+            "Tusuk gigi",
+            "Obat kumur",
+            "Pasta/gel fluor"
+          ],
+          "halYangSeringDigunakanLainnya": "Pasta gigi,Gigi palsu",
+          "keunggulanPastaGigiYangDigunakan": [
+            "Perlindungan gigi sensitif",
+            "Mengandung peroxida",
+            "Memiliki banyak manfaat"
+          ],
+          "berapaMenitMembersihkanGigiDanGusiSendiri": {
+            "denganSikat": 3,
+            "denganBenangGigi": 1
+          },
+          "frekuensiMembersihkanGigiDanGusiSendiri": {
+            "denganSikat": {
+              "frekuensi": 3,
+              "satuan": "minggu"
+            },
+            "denganBenangGigi": {
+              "frekuensi": 1,
+              "satuan": "minggu"
+            }
+          },
+          "apaKesulitanMengaturJadwalSikatGigi": "Ya",
+          "kesulitanMembersihkanGigi": [
+            "Memegang sikat/benang untuk waktu yang lama",
+            "Menggunakan benang gigi",
+            "Memegang sikat gigi"
+          ],
+          "apaRutinMemeriksaTiapBulanUntukTahuKankerMulut": "Tidak",
+          "kebiasaan": [
+            "Menggigit benda keras",
+            "Menggertakkan gigi"
+          ]
+        },
+        "bag3": {
+          "camilanWaktuMakans": [
+            {
+              "namaCamilan": "Permen mint",
+              "frekuensiMakan": 4
+            },
+            {
+              "namaCamilan": "Minuman kaleng/botol",
+              "frekuensiMakan": 6
+            },
+            {
+              "namaCamilan": "Obat syrup",
+              "frekuensiMakan": 2
+            },
+            {
+              "namaCamilan": "Minuman manis",
+              "frekuensiMakan": 0
+            },
+            {
+              "namaCamilan": "Permen karet",
+              "frekuensiMakan": 3
+            },
+            {
+              "namaCamilan": "Keripik",
+              "frekuensiMakan": 1
+            },
+            {
+              "namaCamilan": "Buah kering",
+              "frekuensiMakan": 0
+            },
+            {
+              "namaCamilan": "Kerupuk",
+              "frekuensiMakan": 1
+            },
+            {
+              "namaCamilan": "Kue kering",
+              "frekuensiMakan": 3
+            },
+            {
+              "namaCamilan": "Keripik",
+              "frekuensiMakan": 5
+            }
+          ]
+        },
+        "bag4": {
+          "pendapanAndaKemungkinanAdaMasalahGigiDaripadaOranglain": "Jauh diatas rata-rata",
+          "pentingnyaMencegahMasalahGigi": "Tidak terlalu penting",
+          "apaAndaPercayaDapatMenjagaKesehatanGigi": "Ya",
+          "seberapaTinggiAndaPercayaPadaKesehatanGigi": "Baik"
+        }
+      },
+      "pharmacologicalHistory": {
+        "pernahKonsumsiObat": {
+          "pernah": "Ya",
+          "jenisNamaObat": "Obat micin",
+          "untukApa": "penyedap rasa"
+        },
+        "efekSampingObat": "Kecanduan",
+        "pengaruhPositifObat": "Makanan jadi enak",
+        "masalahDosisObat": {
+          "apaAda": "Ya",
+          "penjelaan": "Rasa makanan terlalu enak, jadi kelepasan"
+        },
+        "apaKonsumsiObatTeratur": "Ya"
+      },
+      "vitalSign": [
+        {
+          "tekananDarah": {
+            "tekanan": {
+              "atas": 190,
+              "bawah": 123
+            }
+          },
+          "tekananDarahBPM": 40,
+          "tekananDarahRPM": 90,
+          "tglPeriksa": "2023-12-07"
+        },
+        {
+          "tekananDarah": {
+            "tekanan": {
+              "atas": 89,
+              "bawah": 55
+            }
+          },
+          "tekananDarahBPM": 22,
+          "tekananDarahRPM": 55,
+          "tglPeriksa": "2023-12-04"
+        },
+        {
+          "tekananDarah": {
+            "tekanan": {
+              "atas": 135,
+              "bawah": 64
+            }
+          },
+          "tekananDarahBPM": 45,
+          "tekananDarahRPM": 66,
+          "tglPeriksa": "2023-12-06"
+        }
+      ],
+      "extraIntra": {
+        "extraOral": {
+          "skin1": {
+            "nama": "leher",
+            "NO1": "N",
+            "NO2": "O",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "skin2": {
+            "nama": "pipi",
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "vermilionBorders": {
+            "nama": "atas",
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "O"
+          },
+          "parotidGlands": {
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "O",
+            "NO4": "N"
+          },
+          "lymphNodes": {
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "anteriorCervical": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "O",
+            "NO4": "O"
+          },
+          "posteriorCervical": {
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "O",
+            "NO4": "N"
+          },
+          "submental": {
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "O",
+            "NO4": "N"
+          },
+          "submandibular": {
+            "nama": "kanan",
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "O",
+            "NO4": "O"
+          },
+          "supraclavicular": {
+            "nama": "bawah",
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "O",
+            "NO4": "N"
+          }
+        },
+        "intraOral": {
+          "labialMucosa": {
+            "nama": "samping",
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "labialVestibules": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "O",
+            "NO4": "O"
+          },
+          "anteriorGingivae": {
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "buccalVestibules": {
+            "nama": "sisi 1",
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "buccalGingivae": {
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "O",
+            "NO4": "N"
+          },
+          "tongueDorsal": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "tongueVentral": {
+            "nama": "dalam",
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "tongueLateral": {
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "lingualTonsils": {
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "O",
+            "NO4": "O"
+          },
+          "floorOfMouth": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "O",
+            "NO4": "O"
+          },
+          "lingualGingivae": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "tonsillarPilars": {
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "pharyngealWall": {
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "N"
+          },
+          "softPalate": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "O",
+            "NO4": "N"
+          },
+          "uvula": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "N",
+            "NO4": "O"
+          },
+          "hardPalate": {
+            "NO1": "O",
+            "NO2": "O",
+            "NO3": "N",
+            "NO4": "O"
+          },
+          "palateGingivae": {
+            "NO1": "N",
+            "NO2": "N",
+            "NO3": "O",
+            "NO4": "O"
+          },
+          "submandibularGlands": {
+            "NO1": "O",
+            "NO2": "N",
+            "NO3": "N",
+            "NO4": "O"
+          }
+        }
+      },
+      "ohis": {
+        "debrisIndex": {
+          "index": {
+            "i_1": "9",
+            "i_2": "8",
+            "i_3": "0",
+            "i_4": "1",
+            "i_5": "3",
+            "i_6": "4"
+          },
+          "value": "88"
+        },
+        "calculusIndex": {
+          "index": {
+            "i_1": "4",
+            "i_2": "5",
+            "i_3": "1",
+            "i_4": "3",
+            "i_5": "6",
+            "i_6": "0"
+          },
+          "value": "98"
+        },
+        "value": "92",
+        "kriteria": "B"
+      },
+      "plaqueControl": {
+        "kunjunganKe": 1,
+        "controls": {
+          "control_18": {
+            "up": "true",
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_17": {
+            "up": "true",
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_16": {
+            "up": "true",
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_15": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_14": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_13": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_12": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_11": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_55": {
+            "up": false,
+            "down": false,
+            "left": "true",
+            "right": false
+          },
+          "control_54": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_53": {
+            "up": false,
+            "down": "true",
+            "left": false,
+            "right": false
+          },
+          "control_52": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_51": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": "true"
+          },
+          "control_21": {
+            "up": "true",
+            "down": false,
+            "left": false,
+            "right": "true"
+          },
+          "control_22": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_23": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_24": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_25": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_26": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_27": {
+            "up": "true",
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_28": {
+            "up": "true",
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_61": {
+            "up": false,
+            "down": false,
+            "left": "true",
+            "right": false
+          },
+          "control_62": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_63": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_64": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_65": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": "true"
+          },
+          "control_85": {
+            "up": false,
+            "down": "true",
+            "left": false,
+            "right": false
+          },
+          "control_84": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_83": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_82": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_81": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_48": {
+            "up": false,
+            "down": "true",
+            "left": "true",
+            "right": false
+          },
+          "control_47": {
+            "up": false,
+            "down": "true",
+            "left": false,
+            "right": false
+          },
+          "control_46": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_45": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_44": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_43": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_42": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_41": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": "true"
+          },
+          "control_71": {
+            "up": false,
+            "down": "true",
+            "left": false,
+            "right": false
+          },
+          "control_72": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_73": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_74": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_75": {
+            "up": false,
+            "down": "true",
+            "left": false,
+            "right": false
+          },
+          "control_31": {
+            "up": false,
+            "down": false,
+            "left": "true",
+            "right": false
+          },
+          "control_32": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_33": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_34": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_35": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_36": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_37": {
+            "up": false,
+            "down": false,
+            "left": false,
+            "right": false
+          },
+          "control_38": {
+            "up": "true",
+            "down": "true",
+            "left": "true",
+            "right": "true"
+          }
+        },
+        "totSkor": 23,
+        "tot": 85,
+        "skor": 18,
+        "kategori": "Buruk"
+      },
+      "penilaianGusi": {
+        "sextan1": "1",
+        "sextan2": "2",
+        "sextan3": "5",
+        "sextan4": "5",
+        "sextan5": "4",
+        "sextan6": "3"
+      },
+      "id": 5,
+      "informedConsentFile": {
+        "rawFile": {
+          "path": "CV_MARIO.pdf"
+        },
+        "src": "blob:http://localhost:5173/47d9df46-7bc4-4d46-8b77-ccfcb9d14c9e",
+        "title": "CV_MARIO.pdf"
+      }
     }
   ]
 }

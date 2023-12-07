@@ -1,0 +1,132 @@
+.print-page {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    visibility: visible;
+}
+.print-page p {
+    text-indent: 0.5in;
+    text-align: justify;
+    text-justify: inter-word;
+
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+.page-potrait {
+    margin: 0 auto;
+    width: 19cm;
+}
+.page-break {
+    display: none;
+}
+.print-page-header {
+    font-size: 14pt;
+    font-weight: 900;
+    display: block;
+    margin: 2em 0 1em 0;
+    text-align: center;
+
+    display: none;
+    flex-direction: row;
+
+    border-bottom: 3px solid black;
+}
+.print-page-header img {
+    height: 100px;
+}
+.print-page-header p {
+    font-weight: normal;
+    font-size: 12pt;
+}
+.f12 {font-size: 12pt;}
+.f14 {font-size: 14pt;}
+.f16 {font-size: 16pt;}
+.f18 {font-size: 18pt;}
+
+.printable.hide {
+    display: none;
+}
+.print-page table tr {
+    vertical-align: top;
+}
+
+.print-page-table{
+    width: 100%;
+}
+table.print-page-table + table.print-page-table{
+    margin-top: -1px;
+}
+.print-page-table :is(th,td) {
+    padding: .5em 1em;
+}
+.print-page-table,.print-page-table :is(th,td) {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.table-noBorder,
+.table-noBorder :is(tr,td,th) {
+    border: 0;
+}
+.table-small-line :is(td,th) {
+    padding-block: 0;
+}
+.table-head-colored th {
+    background-color: var(--light);
+}
+.text-underline {
+    text-decoration: underline;
+}
+
+.minWidth-fitContent {
+    width: 0;
+    white-space: nowrap;
+}
+.vAlign-center {
+    vertical-align: middle;
+}
+/* Only print #print-page */
+@media print {
+    @page {
+        margin: 3cm auto;
+    }
+    
+    /* body {
+        visibility: hidden;
+        font-size: 12pt;
+        padding: 3cm;
+    } */
+    .print-page {
+        visibility: visible;
+        /* margin: 3cm auto; */
+    }
+    .print-page-header {
+        visibility: visible;
+        display: flex;
+        /* margin-top: 3cm; */
+    }
+    .page-break {
+        /* margin-top: 1rem; */
+        display: block;
+        visibility: visible;
+        page-break-before: auto;
+    }
+    .page-break-before {
+        page-break-before: auto;
+    }
+    .avoid-page-break{
+        page-break-inside: avoid;
+    }
+    .printable{
+        visibility: visible;
+    }
+    .printable.hide{
+        display: block;
+    }
+    .printable.hide.inline{
+        display: inline-block;
+    }
+    .not-printable {
+        visibility: hidden;
+        display: none;
+    }
+}

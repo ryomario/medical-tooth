@@ -1,17 +1,10 @@
+import { MedicalHistoryInputs } from "@app/constants/medicFormInputs";
 import { Box, Button, TextField } from "@mui/material";
 import { useState } from "react";
 import { CheckboxGroupInput } from "react-admin";
 
 export default function MedicalHistory(props: { className?: string }) {
-    const [choices, setChoices] = useState([
-        "Pasien merasa dalam keadaan sehat",
-        "Selama 5 tahun terakhir, pasien pernah dinyatakan mengalami penyakit serius, menjalani operasi dan atau di rawat inap di rumah sakit, yaitu sakit/operasi.",
-        "Pasien mempunyai kelainan pembekuan darah",
-        "Alergi makanan",
-        "Alergi obat-obatan",
-        "Alergi obat yang disuntik (obat bius)",
-        "Alergi cuaca"
-    ]);
+    const [choices, setChoices] = useState(MedicalHistoryInputs.values);
     const [value, setValue] = useState('');
     const toChoices = (items: string[]) => items.map(item => ({id: item, name: item}));
 

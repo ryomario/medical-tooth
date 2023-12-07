@@ -39,7 +39,7 @@ export default function MedicsTable() {
                                     tertiaryText={record => new Date(record.tglKunjungan).toLocaleDateString()}
                                 />
                             ) : (
-                                <Datagrid>
+                                <Datagrid rowClick="show">
                                     <TextField source="id"/>
                                     <ReferenceField source="mahasiswaId" reference="mahasiswas">
                                         <>

@@ -1,11 +1,9 @@
+import { DentalHistoryInputs } from "@app/constants/medicFormInputs";
 import { Box, Button, Dialog, DialogActions, DialogContent, InputAdornment, TextField } from "@mui/material";
 import { useState } from "react";
 import { CheckboxGroupInput, NumberInput, RadioButtonGroupInput, SelectArrayInput, SelectInput, TextInput, useCreateSuggestionContext } from "react-admin";
 
-const pilihanKebiasaan = [
-    {id: 'Menggigit benda keras', name: 'Menggigit benda keras'},
-    {id: 'Merokok', name: 'Merokok'}
-];
+const pilihanKebiasaan = DentalHistoryInputs.kebiasaan.map(item => ({id: item, name: item}));
 
 export default function DentalHistoryBagian2() {
     return (
@@ -13,23 +11,14 @@ export default function DentalHistoryBagian2() {
             <CheckboxGroupInput
                 source="dentalHistory.bag2.halYangSeringDigunakan"
                 label="1. Pilih hal-hal berikut yang sering anda gunakan di rumah!"
-                choices={[
-                    "Sikat gigi dengan bulu sikat lunak", "Karet pemijat gusi", "Air minum berfluoride", "Air dalam botol/kemasaan",
-                    "Sikat gigi dengan bulu sikat keras", "Sikat khusus sela-sela gigi", "Sikat gigi elektrik", "Tusuk gigi",
-                    "Sikat gigi dengan bulu sikat sedang", "Air minum berfluoride yang digunakan setiap hari", "Alat irigasi mulut", "Benang gigi bertangkai",
-                    "Perekat gigi tiruan", "Pembersih gigi tiruan", "Obat kumur", "Benang gigi",
-                    "Pemutih gigi", "Sikat gigi khusus", "Pasta/gel fluor", "Pasta gigi berfluoride", "Fluor tetes/tablet"
-                ].map(item => ({id: item, name: item}))}
+                choices={DentalHistoryInputs.halYangSeringDigunakan.map(item => ({id: item, name: item}))}
             />
             <TextInput source="dentalHistory.bag2.halYangSeringDigunakanLainnya" label="Lain-lain" helperText="Tulis hal lainnya untuk poin 1."/>
 
             <CheckboxGroupInput
                 source="dentalHistory.bag2.keunggulanPastaGigiYangDigunakan"
                 label="2. Pilih keunggulan pasta gigi yang anda gunakan!"
-                choices={[
-                    "Berfluoride", "Perlindungan gigi sensitif", "Mengontrol karang gigi", "Mengandung baking soda",
-                    "Beraroma mint", "Mengandung peroxida", "Memiliki banyak manfaat"
-                ].map(item => ({id: item, name: item}))}
+                choices={DentalHistoryInputs.keunggulanPastaGigiYangDigunakan.map(item => ({id: item, name: item}))}
             />
 
             <fieldset className="MuiFormControl-root MuiFormControl-marginDense ra-input css-17g58nf-MuiFormControl-root-RaCheckboxGroupInput-root">
@@ -128,10 +117,7 @@ export default function DentalHistoryBagian2() {
             <CheckboxGroupInput
                 source="dentalHistory.bag2.kesulitanMembersihkanGigi"
                 label="6. Apa saja kondisi yang membuat anda kesulitan membersihkan gigi?"
-                choices={[
-                    "Memegang sikat gigi", "Menggunakan benang gigi", "Memegang sikat/benang untuk waktu yang lama",
-                    "Penglihatan yang buruk"
-                ].map(item => ({id: item, name: item}))}
+                choices={DentalHistoryInputs.kesulitanMembersihkanGigi.map(item => ({id: item, name: item}))}
                 helperText="Jika merasa tidak kesulitan bisa mengabaikan opsi ini"
             />
 
